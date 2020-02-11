@@ -97,9 +97,32 @@ public class Paquet {
     private void coupeSimple(){
         
     }
-    
+    /**
+     * On interverti les cartes apres le joker au fond et avant le joker a la surface
+     */
     private void doubleCoupe(){
+        Paquet paquet_debut;
+        Paquet paquet_milieu;
+        Paquet paquet_fin;
+        Paquet paquetRes;
         
+        int indiceN = this.findJoker("noir");
+        int indiceR = this.findJoker("rouge");
+        
+        if(indiceN < indiceR) {
+            paquet_debut = new Paquet(this, 0, indiceN-1);
+            paquet_milieu = new Paquet(this, indiceN, indiceR);
+            paquet_fin = new Paquet(this, indiceR+1, nbCartes-1);
+        }
+        else {
+            paquet_debut = new Paquet(this, 0, indiceR-1);
+            paquet_milieu = new Paquet(this, indiceR, indiceN);
+            paquet_fin = new Paquet(this, indiceN+1, nbCartes-1);
+        }
+        
+        paquetRes = new Paquet(paquet_debut, paquet_milieu);
+        paquetRes = new Paquet(paquetRes, paquet_fin);
+        this.cartes = paquetRes.getPaquet();
     }
     /**
      * Déplace le joker noir vers le fond du paquet d'un poisition si au milieu
@@ -131,8 +154,8 @@ public class Paquet {
         int res = -1;
         
         while (!trouve && i < this.nbCartes) {
-            if(this.cartes.get(i).getValeur().getId() == 53 && "noir".equals(couleur)) trouve = true;
-            if(this.cartes.get(i).getValeur().getId() == 54 && "rouge".equals(couleur)) trouve = true;
+            if(this.cartes.get(i).getType() == TYPE_CARTE.JOKER_N && "noir".equals(couleur)) trouve = true;
+            if(this.cartes.get(i).getType() == TYPE_CARTE.JOKER_R && "rouge".equals(couleur)) trouve = true;
             i++;
         }
         if(trouve) res = i;
