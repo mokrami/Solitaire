@@ -205,4 +205,12 @@ public class Paquet {
             this.cartes.set(indCarte2, tmp);
         }
     }
+    
+    public String toString() {
+        String s ="";
+        for(int i = 0; i<nbCartes; i++) {
+            s+=i + " | " + this.getPaquet().get(i).getValeur().toString() + "\n";
+        }
+        return s;
+    }
 }

@@ -17,7 +17,7 @@ public class Solitaire {
     public static void main(String[] args) {
         Paquet paquet;
         paquet =  new Paquet();
-        System.out.println(paquet.getPaquet().size());
+        System.out.println(paquet.toString());
     }
     
 }

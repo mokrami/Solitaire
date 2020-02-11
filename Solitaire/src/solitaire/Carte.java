@@ -13,6 +13,11 @@ public class Carte {
     private TYPE_CARTE type;
     private Valeur_Carte valeur;
     
+    public String toString() {
+        String s = "";
+        return s;
+    }
+    
     public Carte(int indice){
         if(indice > 0 && indice < 14){
             this.type = TYPE_CARTE.TREFLE;

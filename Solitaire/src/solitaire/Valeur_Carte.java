@@ -13,6 +13,10 @@ public class Valeur_Carte {
     private int id;
     private int val_num;
     private String val_str;
+    
+    public String toString() {
+        return val_str;
+    }
         
     public Valeur_Carte(int _id, int num, String str){
         this.id = _id;
@@ -31,11 +35,13 @@ public class Valeur_Carte {
             case 13:
                 this.val_str = "roi " + str;
             break;
+            case -1:
+                this.val_str = str;
+            break;
             default:
                 this.val_str = num + " " + str;
             break;
         }
-        this.val_str = str;
     }
     
     public int getId() {
