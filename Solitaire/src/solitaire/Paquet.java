@@ -47,12 +47,23 @@ public class Paquet {
         this.cartes.addAll(p.getPaquet().subList(indiceDebut, indiceFin+1));
     }
     
+    /**
+     * Retourne la liste de cartes qui compose le paquet
+     * @return La liste des cartes
+     */
     public ArrayList<Carte> getPaquet(){
         return this.cartes;
     }
     
+    /**
+     * Retourne la carte à l'indice donné
+     * @param indice Indice de la carte recherchée
+     * @return La carte ou null si l'indice est incorrect
+     */
     public Carte lireCarte(int indice){
-        return null;
+        Carte res = null;
+        if(indice >= 0 && indice < this.nbCartes) res = this.cartes.get(indice);
+        return res;
     }
     
     public Carte derniereCarte(){
@@ -99,6 +110,11 @@ public class Paquet {
         
     }
     
+    /**
+     * Met la carte 1 à la position de la carte 2 et inversement
+     * @param indCarte1 Indice de la première carte à permuter
+     * @param indCarte2 Indice de la deuxième carte à permuter
+     */
     private void permuter(int indCarte1, int indCarte2){
         
     }
