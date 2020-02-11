@@ -13,9 +13,16 @@ import java.util.ArrayList;
  */
 public class Paquet {
     private ArrayList<Carte> cartes;
+    private final int nbCartes = 54;
     
     public Paquet(){
+        Carte c;
+        
         this.cartes = new ArrayList<>();
+        for(int i=1; i<=this.nbCartes; i++){
+            c = new Carte(i);
+            this.cartes.add(c);
+        }
     }
     
     public Paquet(Paquet p1, Paquet p2){
