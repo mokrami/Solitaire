@@ -74,8 +74,12 @@ public class Paquet {
         return res;
     }
     
+    /**
+     * Retourne la dernière carte du paquet
+     * @return La carte à la dernière position du paquet
+     */
     public Carte derniereCarte(){
-        return null;
+        return this.lireCarte(nbCartes-1);
     }
     
     public String creerMasqueJetable(int taille){
