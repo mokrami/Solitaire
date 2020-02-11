@@ -105,8 +105,26 @@ public class Paquet {
         this.coupeSimple();
     }
     
+    /**
+     * Génère une lettre pseudo-aléatoire en utilisant la méthode du solitaire
+     * @return Une lettre générée pseudo-aléatoirement
+     */
     private char lectureLettreAleatoire(){
-        return 'a';
+        char c = 'a';
+        
+        int n = this.lireCarte(0).getId();
+        int m = this.lireCarte(n-1).getId();
+        
+        if(m >= 53){
+            this.melange();
+            c = this.lectureLettreAleatoire();
+        }
+        else{
+            int indiceLettre = m % 26;
+            c = (char) (97 + indiceLettre);
+        }
+        
+        return c;
     }
     
     /**
