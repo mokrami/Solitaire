@@ -11,4 +11,11 @@ package solitaire;
  */
 public class Utilisateur {
     
+    public String crypter(String message) {
+        return "";
+    }
+    
+    public String decrypter(String message) {
+        return "";
+    }
 }

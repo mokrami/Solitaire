@@ -11,4 +11,6 @@ package solitaire;
  */
 public class Valeur_Carte {
     
+    private int val_num;
+    private String val_str;
 }
