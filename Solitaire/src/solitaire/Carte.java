@@ -10,7 +10,6 @@ package solitaire;
  * @author im678382
  */
 public class Carte {
-    
     private TYPE_CARTE type;
-    private int valeur;
+    private Valeur_Carte valeur;
 }

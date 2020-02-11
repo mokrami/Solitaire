@@ -5,10 +5,16 @@
  */
 package solitaire;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author im678382
  */
 public class Paquet {
+    private ArrayList<Carte> cartes;
     
+    public Paquet(){
+        this.cartes = new ArrayList<>();
+    }
 }
