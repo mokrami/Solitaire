@@ -114,8 +114,16 @@ public class Paquet {
         
     }
     
+    /**
+     * Déplace une carte vers le fond du paquet (avec retour au début si on dépasse le nombre de cartes)
+     * @param indice Indice de la carte à déplacer
+     * @param pas Nombre de positions à avancer
+     */
     private void avance(int indice, int pas){
-        
+        if(indice >= 0){
+            int autre_indice = (indice + pas)%(this.nbCartes-1);
+            this.permuter(indice, autre_indice);
+        }
     }
     
     private void findJoker(String couleur){
