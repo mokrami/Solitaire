@@ -210,7 +210,7 @@ public class Paquet {
      * Trouve le joker dont la couleur est specifiee comme parametre dans le paquet
      * @param couleur couleur du joker a trouver
      */
-    private int findJoker(String couleur){
+    public int findJoker(String couleur){
         boolean trouve = false;
         int i = 0;
         int res = -1;
@@ -220,9 +220,9 @@ public class Paquet {
             if(this.cartes.get(i).getType() == TYPE_CARTE.JOKER_R && "rouge".equals(couleur)) trouve = true;
             i++;
         }
-        if(trouve) res = i;
+        if(trouve) res = (i-1);
         
-        return i;
+        return res;
     }
     
     /**
