@@ -15,6 +15,11 @@ public class Paquet {
     private ArrayList<Carte> cartes;
     private final int nbCartes = 54;
     
+    /**
+     * Constructeur qui cree initialise d'abord un paquet de carte dans l'ordre
+     * bridge puis les melange de maniere aléatoire pour donner l'état initial
+     * du paquet de carte
+     */
     public Paquet(){
         Carte c;
         
