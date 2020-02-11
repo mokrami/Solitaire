@@ -39,4 +39,12 @@ public class Carte {
             this.valeur = new Valeur_Carte(indice, -1, "joker rouge");
         }
     }
+    
+    public TYPE_CARTE getType() {
+        return this.type;
+    }
+    
+    public Valeur_Carte getValeur() {
+        return this.valeur;
+    } 
 }

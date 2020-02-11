@@ -13,7 +13,7 @@ public class Valeur_Carte {
     private int id;
     private int val_num;
     private String val_str;
-    
+        
     public Valeur_Carte(int _id, int num, String str){
         this.id = _id;
         this.val_num = num;
@@ -36,5 +36,17 @@ public class Valeur_Carte {
             break;
         }
         this.val_str = str;
+    }
+    
+    public int getId() {
+        return this.id;
+    }
+    
+    public int getValNum() {
+        return this.val_num;
+    }
+    
+    public String getValString() {
+        return this.val_str;
     }
 }
