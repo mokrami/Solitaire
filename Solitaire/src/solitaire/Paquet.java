@@ -60,7 +60,7 @@ public class Paquet {
      * @return La liste des cartes
      */
     public ArrayList<Carte> getPaquet(){
-        return this.cartes;
+        return (ArrayList<Carte>) this.cartes.clone();
     }
     
     /**
@@ -82,20 +82,50 @@ public class Paquet {
         return this.lireCarte(nbCartes-1);
     }
     
+    /**
+     * Crée une chaîne de caractères d'une certaine taille à utiliser comme masque jetable
+     * @param taille Taille du masque jetable (taille du message à encoder)
+     * @return Le masque jetable
+     */
     public String creerMasqueJetable(int taille){
-        return "";
+        String res = "";
+        
+        for(int i=0; i<taille; i++) res += this.lectureLettreAleatoire();
+        
+        return res;
     }
     
+    /**
+     * Mélange le paquet de carte selon la méthode du solitaire
+     */
     private void melange(){
-        
+        this.reculerJokerNoir();
+        this.reculerJokerRouge();
+        this.doubleCoupe();
+        this.coupeSimple();
     }
     
     private char lectureLettreAleatoire(){
         return 'a';
     }
     
+    /**
+     * Effectue la phase de coupe simple du paquet
+     */
     private void coupeSimple(){
+        //Etude de la dernière carte
+        int n = this.derniereCarte().getId();
         
+        //Construction des sous-paquets
+        Paquet paquet1, paquet2, paquet3, paquetFinal;
+        paquet1 = new Paquet(this, 0, n-1);
+        paquet2 = new Paquet(this, n, this.nbCartes-2);
+        paquet3 = new Paquet(this, this.nbCartes-1, this.nbCartes-1);
+        
+        //Fusion pour construction du paquet final
+        paquetFinal = new Paquet(paquet2, paquet1);
+        paquetFinal = new Paquet(paquetFinal, paquet3);
+        this.cartes = paquetFinal.getPaquet();
     }
     /**
      * On interverti les cartes apres le joker au fond et avant le joker a la surface

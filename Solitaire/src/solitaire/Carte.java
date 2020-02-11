@@ -36,7 +36,7 @@ public class Carte {
         }
         else if(indice == 54){
             this.type = TYPE_CARTE.JOKER_R;
-            this.valeur = new Valeur_Carte(indice, -1, "joker rouge");
+            this.valeur = new Valeur_Carte(53, -1, "joker rouge");
         }
     }
     
@@ -47,4 +47,8 @@ public class Carte {
     public Valeur_Carte getValeur() {
         return this.valeur;
     } 
+    
+    public int getId(){
+        return this.valeur.getId();
+    }
 }
