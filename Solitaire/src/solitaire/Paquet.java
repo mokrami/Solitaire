@@ -99,7 +99,7 @@ public class Paquet {
     }
     
     private void doubleCoupe(){
-        
+        int n = this.derniereCarte().getId();
     }
     /**
      * Déplace le joker noir vers le fond du paquet d'un poisition si au milieu
