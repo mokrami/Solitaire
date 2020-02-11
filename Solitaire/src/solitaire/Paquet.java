@@ -128,6 +128,10 @@ public class Paquet {
      * @param indCarte2 Indice de la deuxième carte à permuter
      */
     private void permuter(int indCarte1, int indCarte2){
-        Carte tmp = this.lireCarte(indCarte1);
+        if(indCarte1 >= 0 && indCarte2 >= 0 && indCarte1 < this.nbCartes && indCarte2 < this.nbCartes){
+            Carte tmp = this.lireCarte(indCarte1);
+            this.cartes.set(indCarte1, this.cartes.get(indCarte2));
+            this.cartes.set(indCarte2, tmp);
+        }
     }
 }
