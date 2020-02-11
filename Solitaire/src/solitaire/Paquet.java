@@ -60,7 +60,7 @@ public class Paquet {
      * @return La liste des cartes
      */
     public ArrayList<Carte> getPaquet(){
-        return this.cartes;
+        return (ArrayList<Carte>) this.cartes.clone();
     }
     
     /**
@@ -94,12 +94,27 @@ public class Paquet {
         return 'a';
     }
     
+    /**
+     * Effectue la phase de coupe simple du paquet
+     */
     private void coupeSimple(){
+        //Etude de la dernière carte
+        int n = this.derniereCarte().getId();
         
+        //Construction des sous-paquets
+        Paquet paquet1, paquet2, paquet3, paquetFinal;
+        paquet1 = new Paquet(this, 0, n-1);
+        paquet2 = new Paquet(this, n, this.nbCartes-2);
+        paquet3 = new Paquet(this, this.nbCartes-1, this.nbCartes-1);
+        
+        //Fusion pour construction du paquet final
+        paquetFinal = new Paquet(paquet2, paquet1);
+        paquetFinal = new Paquet(paquetFinal, paquet3);
+        this.cartes = paquetFinal.getPaquet();
     }
     
     private void doubleCoupe(){
-        int n = this.derniereCarte().getId();
+        
     }
     /**
      * Déplace le joker noir vers le fond du paquet d'un poisition si au milieu
