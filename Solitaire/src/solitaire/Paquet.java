@@ -6,6 +6,7 @@
 package solitaire;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  *
@@ -28,6 +29,8 @@ public class Paquet {
             c = new Carte(i);
             this.cartes.add(c);
         }
+        
+        Collections.shuffle(this.cartes);
     }
     
     /**
