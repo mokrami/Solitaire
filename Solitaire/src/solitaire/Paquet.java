@@ -107,13 +107,12 @@ public class Paquet {
     }
     
     /**
-     * Déplace une carte vers le fond du paquet (avec retour au début si on dépasse le nombre de cartes)
-     * @param indice Indice de la carte à déplacer
-     * @param pas Nombre de positions à avancer
+     * Déplace le joker rouge vers le fond du paquet de deux positions (avec retour au début si on dépasse le nombre de cartes)
      */
-    private void reculerJokerRouge(int indice, int pas){
+    private void reculerJokerRouge(){
+        int indice = this.findJoker("rouge");
         if(indice >= 0){
-            int autre_indice = (indice + pas)%(this.nbCartes-1);
+            int autre_indice = (indice + 2)%(this.nbCartes-1);
             this.permuter(indice, autre_indice);
         }
     }
@@ -124,11 +123,15 @@ public class Paquet {
     private int findJoker(String couleur){
         boolean trouve = false;
         int i = 0;
-        while (!trouve) {
+        int res = -1;
+        
+        while (!trouve && i < this.nbCartes) {
             if(this.cartes.get(i).getValeur().getId() == 53 && "noir".equals(couleur)) trouve = true;
             if(this.cartes.get(i).getValeur().getId() == 54 && "rouge".equals(couleur)) trouve = true;
             i++;
         }
+        if(trouve) res = i;
+        
         return i;
     }
     
