@@ -86,8 +86,14 @@ public class Paquet {
         return "";
     }
     
+    /**
+     * Mélange le paquet de carte selon la méthode du solitaire
+     */
     private void melange(){
-        
+        this.reculerJokerNoir();
+        this.reculerJokerRouge();
+        this.doubleCoupe();
+        this.coupeSimple();
     }
     
     private char lectureLettreAleatoire(){
