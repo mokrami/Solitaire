@@ -82,8 +82,17 @@ public class Paquet {
         return this.lireCarte(nbCartes-1);
     }
     
+    /**
+     * Crée une chaîne de caractères d'une certaine taille à utiliser comme masque jetable
+     * @param taille Taille du masque jetable (taille du message à encoder)
+     * @return Le masque jetable
+     */
     public String creerMasqueJetable(int taille){
-        return "";
+        String res = "";
+        
+        for(int i=0; i<taille; i++) res += this.lectureLettreAleatoire();
+        
+        return res;
     }
     
     /**
