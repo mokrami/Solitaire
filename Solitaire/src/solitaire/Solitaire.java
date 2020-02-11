@@ -17,7 +17,8 @@ public class Solitaire {
     public static void main(String[] args) {
         Paquet paquet;
         paquet =  new Paquet();
-        System.out.println(paquet.toString());
+        paquet.melange();
+        System.out.println(paquet.creerMasqueJetable(1));
     }
     
 }

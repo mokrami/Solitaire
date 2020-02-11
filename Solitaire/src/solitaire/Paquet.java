@@ -92,16 +92,30 @@ public class Paquet {
         
         for(int i=0; i<taille; i++) res += this.lectureLettreAleatoire();
         
-        return res;
+        return res.toUpperCase();
     }
     
     /**
      * Mélange le paquet de carte selon la méthode du solitaire
      */
-    private void melange(){
+    public void melange(){
+        System.out.println("-- Etape 1 :");
+        System.out.println(this.toString());
         this.reculerJokerNoir();
+        
+        System.out.println("");
+        System.out.println("-- Etape 2 :");
+        System.out.println(this.toString());
         this.reculerJokerRouge();
+        
+        System.out.println("");
+        System.out.println("-- Etape 3 :");
+        System.out.println(this.toString());
         this.doubleCoupe();
+        
+        System.out.println("");
+        System.out.println("-- Etape 4 :");
+        System.out.println(this.toString());
         this.coupeSimple();
     }
     
@@ -224,6 +238,7 @@ public class Paquet {
         }
     }
     
+    @Override
     public String toString() {
         String s ="";
         for(int i = 0; i<nbCartes; i++) {
