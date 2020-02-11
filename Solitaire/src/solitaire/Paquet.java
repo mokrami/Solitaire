@@ -116,6 +116,6 @@ public class Paquet {
      * @param indCarte2 Indice de la deuxième carte à permuter
      */
     private void permuter(int indCarte1, int indCarte2){
-        
+        Carte tmp = this.lireCarte(indCarte1);
     }
 }
