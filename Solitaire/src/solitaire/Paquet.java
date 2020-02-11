@@ -125,9 +125,18 @@ public class Paquet {
             this.permuter(indice, autre_indice);
         }
     }
-    
-    private void findJoker(String couleur){
-        
+    /**
+     * Trouve le joker dont la couleur est specifiee comme parametre dnas le paquet
+     * @param couleur couleur du joker a trouver
+     */
+    private int findJoker(String couleur){
+        boolean trouve = false;
+        int i = 0;
+        while (!trouve) {
+            if(this.cartes.get(i).getValeur().getId() == 53 && couleur == "noir") trouve = true;
+            if(this.cartes.get(i).getValeur().getId() == 54 && couleur == "rouge") trouve = true;
+        }
+        return i;
     }
     
     /**
