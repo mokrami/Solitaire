@@ -25,16 +25,30 @@ public class Paquet {
         }
     }
     
+    /**
+     * Construit un nouveau gros paquet par fusion de deux plus petits
+     * @param p1 Premier paquet à fusionner
+     * @param p2 Deuxième paquet à fusionner
+     */
     public Paquet(Paquet p1, Paquet p2){
-        
+        this.cartes = new ArrayList<>();
+        if(p1 != null) this.cartes.addAll(p1.getPaquet());
+        if(p2 != null) this.cartes.addAll(p2.getPaquet());
     }
     
+    /**
+     * Construit un sous-paquet de celui passé en paramètre
+     * @param p Paquet qu'on souhaite tronquer
+     * @param indiceDebut Indice de la première carte du sous-paquet
+     * @param indiceFin Indice de la dernière carte du sous-paquet
+     */
     public Paquet(Paquet p, int indiceDebut, int indiceFin){
-        
+        this.cartes = new ArrayList<>();
+        this.cartes.addAll(p.getPaquet().subList(indiceDebut, indiceFin+1));
     }
     
     public ArrayList<Carte> getPaquet(){
-        return null;
+        return this.cartes;
     }
     
     public Carte lireCarte(int indice){
