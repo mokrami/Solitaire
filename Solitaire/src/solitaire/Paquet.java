@@ -94,11 +94,7 @@ public class Paquet {
         return 'a';
     }
     
-    private void reculJokerNoir(){
-        
-    }
-    
-    private void reculJokerRouge(){
+    private void coupeSimple(){
         
     }
     
@@ -106,11 +102,7 @@ public class Paquet {
         
     }
     
-    private void coupeSimple(){
-        
-    }
-    
-    private void reculer(int indice, int pas){
+    private void reculerJokerNoir(int indice, int pas){
         
     }
     
@@ -119,7 +111,7 @@ public class Paquet {
      * @param indice Indice de la carte à déplacer
      * @param pas Nombre de positions à avancer
      */
-    private void avance(int indice, int pas){
+    private void reculerJokerRouge(int indice, int pas){
         if(indice >= 0){
             int autre_indice = (indice + pas)%(this.nbCartes-1);
             this.permuter(indice, autre_indice);
