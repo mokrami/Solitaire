@@ -90,7 +90,10 @@ public class Paquet {
     public String creerMasqueJetable(int taille){
         String res = "";
         
-        for(int i=0; i<taille; i++) res += this.lectureLettreAleatoire();
+        for(int i=0; i<taille; i++){
+            this.melange();
+            res += this.lectureLettreAleatoire();
+        }
         
         return res.toUpperCase();
     }
@@ -117,6 +120,10 @@ public class Paquet {
         System.out.println("-- Etape 4 :");
         System.out.println(this.toString());
         this.coupeSimple();
+        
+        System.out.println("");
+        System.out.println("-- Etape 5 :");
+        System.out.println(this.toString());
     }
     
     /**
@@ -129,7 +136,7 @@ public class Paquet {
         int n = this.lireCarte(0).getId();
         int m = this.lireCarte(n-1).getId();
         
-        if(m >= 53){
+        if(m == 53){
             this.melange();
             c = this.lectureLettreAleatoire();
         }
@@ -182,8 +189,8 @@ public class Paquet {
             paquet_fin = new Paquet(this, indiceN+1, nbCartes-1);
         }
         
-        paquetRes = new Paquet(paquet_debut, paquet_milieu);
-        paquetRes = new Paquet(paquetRes, paquet_fin);
+        paquetRes = new Paquet(paquet_fin, paquet_milieu);
+        paquetRes = new Paquet(paquetRes, paquet_debut);
         this.cartes = paquetRes.getPaquet();
     }
     /**
@@ -192,7 +199,7 @@ public class Paquet {
      */
     private void reculerJokerNoir(){
         int indice = this.findJoker("noir");
-        if(indice == 53) this.permuter(indice, 1);
+        if(indice == nbCartes-1) this.permuter(indice, 1);
         else this.permuter(indice, indice+1);
     }
     
@@ -220,9 +227,9 @@ public class Paquet {
             if(this.cartes.get(i).getType() == TYPE_CARTE.JOKER_R && "rouge".equals(couleur)) trouve = true;
             i++;
         }
-        if(trouve) res = i;
+        if(trouve) res = i-1;
         
-        return i;
+        return res;
     }
     
     /**
