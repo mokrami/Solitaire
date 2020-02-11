@@ -101,9 +101,14 @@ public class Paquet {
     private void doubleCoupe(){
         
     }
-    
-    private void reculerJokerNoir(int indice, int pas){
-        
+    /**
+     * Déplace le joker noir vers le fond du paquet d'un poisition si au milieu
+     * ou le met en deuxieme position si au fond
+     */
+    private void reculerJokerNoir(){
+        int indice = this.findJoker("noir");
+        if(indice == 53) this.permuter(indice, 1);
+        else this.permuter(indice, indice+1);
     }
     
     /**
