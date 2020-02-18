@@ -56,11 +56,40 @@ public class Paquet {
     }
     
     /**
+     * Construit un paquet de carte selon la version encodée en chaîne de caractères d'un autre paquet
+     * @param p Chaîne qui représente le paquet d'origine
+     */
+    public Paquet(String p){
+        this.cartes = new ArrayList<>();
+        String[] cartesS = p.split(":");
+        for(String s : cartesS){
+            try{ this.cartes.add(new Carte(Integer.parseInt(s))); } catch(NumberFormatException e){}
+        }
+    }
+    
+    /**
      * Retourne la liste de cartes qui compose le paquet
      * @return La liste des cartes
      */
     public ArrayList<Carte> getPaquet(){
         return (ArrayList<Carte>) this.cartes.clone();
+    }
+    
+    /**
+     * Retourne une version encodée du paquet sous forme de chaîne de caractères
+     * @return Le paquet de carte sous forme de chaîne de caractères
+     * Chaque carte est représentée par son identifiant (de 1 à 54)
+     * Les cartes sont séparées par le symbole ':'
+     */
+    public String getPaquetS(){
+        String version_str = "";
+        
+        for(Carte c : this.cartes){
+            if(c.getId() < 53 || c.getType() == TYPE_CARTE.JOKER_N) version_str += c.getId() + ':';
+            else version_str += 54 + ':';
+        }
+        
+        return version_str;
     }
     
     /**
