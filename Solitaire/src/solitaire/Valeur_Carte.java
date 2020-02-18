@@ -24,16 +24,16 @@ public class Valeur_Carte {
 
         switch(num){
             case 1:
-                this.val_str = "as " + str;
+                this.val_str = "As " + str;
             break;
             case 11:
-                this.val_str = "valet " + str;
+                this.val_str = "Valet " + str;
             break;
             case 12:
-                this.val_str = "dame " + str;
+                this.val_str = "Dame " + str;
             break;
             case 13:
-                this.val_str = "roi " + str;
+                this.val_str = "Roi " + str;
             break;
             case -1:
                 this.val_str = str;

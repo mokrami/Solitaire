@@ -37,11 +37,11 @@ public class Carte {
         }
         else if(indice == 53){
             this.type = TYPE_CARTE.JOKER_N;
-            this.valeur = new Valeur_Carte(indice, -1, "joker noir");
+            this.valeur = new Valeur_Carte(indice, -1, "Joker noir");
         }
         else if(indice == 54){
             this.type = TYPE_CARTE.JOKER_R;
-            this.valeur = new Valeur_Carte(53, -1, "joker rouge");
+            this.valeur = new Valeur_Carte(53, -1, "Joker rouge");
         }
     }
     
