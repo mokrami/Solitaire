@@ -10,17 +10,23 @@ package solitaire;
  * @author im678382
  */
 public class Utilisateur {
-    
     private Paquet paquet;
+    
+    public Utilisateur(){
+        this.paquet = new Paquet();
+    }
     
     /**
      * Crypte le message donné par l'utilisateur
      * @param message message a crypter
      * @return message crypté
      */
-    public String crypter(String message) {
+    public Message crypter(String message) {
+        Message res = new Message(message);
         String message_resultat = "";
         String masque_jetable = this.getPaquet().creerMasqueJetable(message.length());
+        res.setMasqueJetable(masque_jetable);
+        
         int valeurChar = 0;
         for(int i=0; i<message.length(); i++) {
             System.out.println(message.toUpperCase().charAt(i) + " : " + (message.toUpperCase().charAt(i) - 65));
@@ -30,7 +36,9 @@ public class Utilisateur {
             if(valeurChar < 26) message_resultat+=(char)(valeurChar + 65);
             else message_resultat+=(char)((valeurChar -26) + 65);
         }
-        return message_resultat;
+        res.setMessageArrivee(message_resultat);
+        
+        return res;
     }
     
     /**
@@ -38,9 +46,12 @@ public class Utilisateur {
      * @param message message a decrypter
      * @return message décrypté
      */
-    public String decrypter(String message) {
+    public Message decrypter(String message) {
+        Message res = new Message(message);
         String message_resultat = "";
         String masque_jetable = this.getPaquet().creerMasqueJetable(message.length());
+        res.setMasqueJetable(masque_jetable);
+        
         int valeurChar = 0;
         for(int i=0; i<message.length(); i++) {
             System.out.println(message.toUpperCase().charAt(i) + " : " + (message.toUpperCase().charAt(i) - 65));
@@ -50,7 +61,9 @@ public class Utilisateur {
             if(valeurChar < 26) message_resultat+=(char)(valeurChar + 65);
             else message_resultat+=(char)((valeurChar -26) + 65);
         }
-        return message_resultat;
+        res.setMessageArrivee(message_resultat);
+        
+        return res;
     }
     
     public Paquet getPaquet() {

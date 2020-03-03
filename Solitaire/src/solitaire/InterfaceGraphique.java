@@ -10,12 +10,14 @@ package solitaire;
  * @author alexis
  */
 public class InterfaceGraphique extends javax.swing.JFrame {
+    private Utilisateur user;
 
     /**
      * Creates new form InterfaceGraphique
      */
     public InterfaceGraphique() {
         initComponents();
+        this.user = new Utilisateur();
     }
 
     /**
@@ -114,6 +116,11 @@ public class InterfaceGraphique extends javax.swing.JFrame {
         jPanel3.add(jScrollPane1);
 
         jButton_Crypter.setText("Crypter");
+        jButton_Crypter.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton_CrypterMouseClicked(evt);
+            }
+        });
         jPanel3.add(jButton_Crypter);
 
         jPanel7.add(jPanel3);
@@ -158,6 +165,11 @@ public class InterfaceGraphique extends javax.swing.JFrame {
         jPanel10.add(jScrollPane4);
 
         jButton_Decrypter.setText("Décrypter");
+        jButton_Decrypter.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton_DecrypterMouseClicked(evt);
+            }
+        });
         jPanel10.add(jButton_Decrypter);
 
         jPanel6.add(jPanel10);
@@ -200,6 +212,20 @@ public class InterfaceGraphique extends javax.swing.JFrame {
     private void jButton_ModifierPaquetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ModifierPaquetActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton_ModifierPaquetActionPerformed
+
+    private void jButton_CrypterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton_CrypterMouseClicked
+        String messageACrypter = this.jTextArea_MessageACrypter.getText();
+        Message messageCrypte = this.user.crypter(messageACrypter);
+        this.jTextArea_MasqueJetableCrypter.setText(messageCrypte.getMasqueJetable());
+        this.jTextArea_MessageCrypte.setText(messageCrypte.getMessageArrivee());
+    }//GEN-LAST:event_jButton_CrypterMouseClicked
+
+    private void jButton_DecrypterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton_DecrypterMouseClicked
+        String messageADecrypter = this.jTextArea_MessageADecrypter.getText();
+        Message messageDecrypte = this.user.decrypter(messageADecrypter);
+        this.jTextArea_MasqueJetableDecrypter.setText(messageDecrypte.getMasqueJetable());
+        this.jTextArea_MessageDecrypte.setText(messageDecrypte.getMessageArrivee());
+    }//GEN-LAST:event_jButton_DecrypterMouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.Box.Filler filler1;
