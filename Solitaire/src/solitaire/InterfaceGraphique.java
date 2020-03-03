@@ -27,47 +27,213 @@ public class InterfaceGraphique extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jSplitPane1 = new javax.swing.JSplitPane();
+        jPanel4 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
+        jButton_AfficherPaquet = new javax.swing.JButton();
+        filler2 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
+        jButton_ModifierPaquet = new javax.swing.JButton();
+        jPanel5 = new javax.swing.JPanel();
+        jPanel7 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea_MessageACrypter = new javax.swing.JTextArea();
+        jButton_Crypter = new javax.swing.JButton();
+        jPanel8 = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextArea_MasqueJetableCrypter = new javax.swing.JTextArea();
+        jPanel9 = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTextArea_MessageCrypte = new javax.swing.JTextArea();
+        jPanel6 = new javax.swing.JPanel();
+        jPanel10 = new javax.swing.JPanel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTextArea_MessageADecrypter = new javax.swing.JTextArea();
+        jButton_Decrypter = new javax.swing.JButton();
+        jPanel11 = new javax.swing.JPanel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jTextArea_MasqueJetableDecrypter = new javax.swing.JTextArea();
+        jPanel12 = new javax.swing.JPanel();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        jTextArea_MessageDecrypte = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new java.awt.GridBagLayout());
+        setTitle("Cryptage du solitaire");
+        getContentPane().setLayout(new java.awt.GridLayout(1, 1));
 
-        jPanel1.setBackground(new java.awt.Color(255, 51, 51));
+        jSplitPane1.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
+        jPanel4.setLayout(new javax.swing.BoxLayout(jPanel4, javax.swing.BoxLayout.PAGE_AXIS));
 
-        getContentPane().add(jPanel1, new java.awt.GridBagConstraints());
+        jPanel1.setLayout(new java.awt.GridLayout());
 
-        jPanel2.setBackground(new java.awt.Color(51, 153, 255));
+        jLabel1.setFont(new java.awt.Font("Bebas", 1, 36)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Solitaire");
+        jPanel1.add(jLabel1);
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
+        jPanel4.add(jPanel1);
 
-        getContentPane().add(jPanel2, new java.awt.GridBagConstraints());
+        jPanel2.setLayout(new javax.swing.BoxLayout(jPanel2, javax.swing.BoxLayout.LINE_AXIS));
+
+        jLabel2.setText("Paquet Initial :");
+        jPanel2.add(jLabel2);
+        jPanel2.add(filler1);
+
+        jButton_AfficherPaquet.setText("Afficher");
+        jPanel2.add(jButton_AfficherPaquet);
+        jPanel2.add(filler2);
+
+        jButton_ModifierPaquet.setText("Modifier");
+        jButton_ModifierPaquet.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_ModifierPaquetActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton_ModifierPaquet);
+
+        jPanel4.add(jPanel2);
+
+        jSplitPane1.setTopComponent(jPanel4);
+
+        jPanel5.setLayout(new java.awt.GridLayout(1, 2));
+
+        jPanel7.setLayout(new javax.swing.BoxLayout(jPanel7, javax.swing.BoxLayout.PAGE_AXIS));
+
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Crypter"));
+        jPanel3.setLayout(new javax.swing.BoxLayout(jPanel3, javax.swing.BoxLayout.LINE_AXIS));
+
+        jTextArea_MessageACrypter.setColumns(20);
+        jTextArea_MessageACrypter.setRows(5);
+        jScrollPane1.setViewportView(jTextArea_MessageACrypter);
+
+        jPanel3.add(jScrollPane1);
+
+        jButton_Crypter.setText("Crypter");
+        jPanel3.add(jButton_Crypter);
+
+        jPanel7.add(jPanel3);
+
+        jPanel8.setBorder(javax.swing.BorderFactory.createTitledBorder("Masque Jetable"));
+        jPanel8.setLayout(new javax.swing.BoxLayout(jPanel8, javax.swing.BoxLayout.LINE_AXIS));
+
+        jTextArea_MasqueJetableCrypter.setEditable(false);
+        jTextArea_MasqueJetableCrypter.setBackground(new java.awt.Color(204, 204, 204));
+        jTextArea_MasqueJetableCrypter.setColumns(20);
+        jTextArea_MasqueJetableCrypter.setRows(5);
+        jScrollPane2.setViewportView(jTextArea_MasqueJetableCrypter);
+
+        jPanel8.add(jScrollPane2);
+
+        jPanel7.add(jPanel8);
+
+        jPanel9.setBorder(javax.swing.BorderFactory.createTitledBorder("Message crypté"));
+        jPanel9.setLayout(new javax.swing.BoxLayout(jPanel9, javax.swing.BoxLayout.LINE_AXIS));
+
+        jTextArea_MessageCrypte.setEditable(false);
+        jTextArea_MessageCrypte.setBackground(new java.awt.Color(204, 204, 204));
+        jTextArea_MessageCrypte.setColumns(20);
+        jTextArea_MessageCrypte.setRows(5);
+        jScrollPane3.setViewportView(jTextArea_MessageCrypte);
+
+        jPanel9.add(jScrollPane3);
+
+        jPanel7.add(jPanel9);
+
+        jPanel5.add(jPanel7);
+
+        jPanel6.setLayout(new javax.swing.BoxLayout(jPanel6, javax.swing.BoxLayout.PAGE_AXIS));
+
+        jPanel10.setBorder(javax.swing.BorderFactory.createTitledBorder("Décrypter"));
+        jPanel10.setLayout(new javax.swing.BoxLayout(jPanel10, javax.swing.BoxLayout.LINE_AXIS));
+
+        jTextArea_MessageADecrypter.setColumns(20);
+        jTextArea_MessageADecrypter.setRows(5);
+        jScrollPane4.setViewportView(jTextArea_MessageADecrypter);
+
+        jPanel10.add(jScrollPane4);
+
+        jButton_Decrypter.setText("Décrypter");
+        jPanel10.add(jButton_Decrypter);
+
+        jPanel6.add(jPanel10);
+
+        jPanel11.setBorder(javax.swing.BorderFactory.createTitledBorder("Masque jetable"));
+        jPanel11.setLayout(new javax.swing.BoxLayout(jPanel11, javax.swing.BoxLayout.LINE_AXIS));
+
+        jTextArea_MasqueJetableDecrypter.setEditable(false);
+        jTextArea_MasqueJetableDecrypter.setBackground(new java.awt.Color(204, 204, 204));
+        jTextArea_MasqueJetableDecrypter.setColumns(20);
+        jTextArea_MasqueJetableDecrypter.setRows(5);
+        jScrollPane5.setViewportView(jTextArea_MasqueJetableDecrypter);
+
+        jPanel11.add(jScrollPane5);
+
+        jPanel6.add(jPanel11);
+
+        jPanel12.setBorder(javax.swing.BorderFactory.createTitledBorder("Message décrypté"));
+        jPanel12.setLayout(new javax.swing.BoxLayout(jPanel12, javax.swing.BoxLayout.LINE_AXIS));
+
+        jTextArea_MessageDecrypte.setEditable(false);
+        jTextArea_MessageDecrypte.setBackground(new java.awt.Color(204, 204, 204));
+        jTextArea_MessageDecrypte.setColumns(20);
+        jTextArea_MessageDecrypte.setRows(5);
+        jScrollPane6.setViewportView(jTextArea_MessageDecrypte);
+
+        jPanel12.add(jScrollPane6);
+
+        jPanel6.add(jPanel12);
+
+        jPanel5.add(jPanel6);
+
+        jSplitPane1.setRightComponent(jPanel5);
+
+        getContentPane().add(jSplitPane1);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton_ModifierPaquetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ModifierPaquetActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton_ModifierPaquetActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.Box.Filler filler1;
+    private javax.swing.Box.Filler filler2;
+    private javax.swing.JButton jButton_AfficherPaquet;
+    private javax.swing.JButton jButton_Crypter;
+    private javax.swing.JButton jButton_Decrypter;
+    private javax.swing.JButton jButton_ModifierPaquet;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JSplitPane jSplitPane1;
+    private javax.swing.JTextArea jTextArea_MasqueJetableCrypter;
+    private javax.swing.JTextArea jTextArea_MasqueJetableDecrypter;
+    private javax.swing.JTextArea jTextArea_MessageACrypter;
+    private javax.swing.JTextArea jTextArea_MessageADecrypter;
+    private javax.swing.JTextArea jTextArea_MessageCrypte;
+    private javax.swing.JTextArea jTextArea_MessageDecrypte;
     // End of variables declaration//GEN-END:variables
 }
