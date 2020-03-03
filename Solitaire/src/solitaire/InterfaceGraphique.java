@@ -5,6 +5,10 @@
  */
 package solitaire;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JTextArea;
+
 /**
  *
  * @author alexis
@@ -31,8 +35,10 @@ public class InterfaceGraphique extends javax.swing.JFrame {
 
         jSplitPane1 = new javax.swing.JSplitPane();
         jPanel4 = new javax.swing.JPanel();
+        filler4 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 10), new java.awt.Dimension(0, 10), new java.awt.Dimension(32767, 10));
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        filler3 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 10), new java.awt.Dimension(0, 10), new java.awt.Dimension(32767, 10));
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
@@ -51,6 +57,7 @@ public class InterfaceGraphique extends javax.swing.JFrame {
         jPanel9 = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTextArea_MessageCrypte = new javax.swing.JTextArea();
+        filler5 = new javax.swing.Box.Filler(new java.awt.Dimension(30, 0), new java.awt.Dimension(30, 0), new java.awt.Dimension(30, 32767));
         jPanel6 = new javax.swing.JPanel();
         jPanel10 = new javax.swing.JPanel();
         jScrollPane4 = new javax.swing.JScrollPane();
@@ -65,32 +72,56 @@ public class InterfaceGraphique extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Cryptage du solitaire");
+        setBackground(new java.awt.Color(102, 102, 102));
+        setFont(new java.awt.Font("Bebas", 0, 10)); // NOI18N
+        setPreferredSize(new java.awt.Dimension(1000, 472));
+        setType(java.awt.Window.Type.POPUP);
         getContentPane().setLayout(new java.awt.GridLayout(1, 1));
 
+        jSplitPane1.setBackground(new java.awt.Color(102, 102, 102));
         jSplitPane1.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
 
+        jPanel4.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel4.setForeground(new java.awt.Color(102, 102, 102));
         jPanel4.setLayout(new javax.swing.BoxLayout(jPanel4, javax.swing.BoxLayout.PAGE_AXIS));
 
+        filler4.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel4.add(filler4);
+
+        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
         jPanel1.setLayout(new java.awt.GridLayout());
 
         jLabel1.setFont(new java.awt.Font("Bebas", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(204, 204, 204));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Solitaire");
         jPanel1.add(jLabel1);
 
         jPanel4.add(jPanel1);
 
+        filler3.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel4.add(filler3);
+
+        jPanel2.setBackground(new java.awt.Color(51, 51, 51));
         jPanel2.setLayout(new javax.swing.BoxLayout(jPanel2, javax.swing.BoxLayout.LINE_AXIS));
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(204, 204, 204));
         jLabel2.setText("Paquet Initial :");
         jPanel2.add(jLabel2);
         jPanel2.add(filler1);
 
+        jButton_AfficherPaquet.setBackground(new java.awt.Color(204, 204, 204));
+        jButton_AfficherPaquet.setFont(new java.awt.Font("Bebas", 0, 16)); // NOI18N
         jButton_AfficherPaquet.setText("Afficher");
+        jButton_AfficherPaquet.setMargin(new java.awt.Insets(10, 70, 10, 70));
         jPanel2.add(jButton_AfficherPaquet);
         jPanel2.add(filler2);
 
+        jButton_ModifierPaquet.setBackground(new java.awt.Color(204, 204, 204));
+        jButton_ModifierPaquet.setFont(new java.awt.Font("Bebas", 0, 16)); // NOI18N
         jButton_ModifierPaquet.setText("Modifier");
+        jButton_ModifierPaquet.setMargin(new java.awt.Insets(10, 70, 10, 70));
         jButton_ModifierPaquet.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_ModifierPaquetActionPerformed(evt);
@@ -102,20 +133,30 @@ public class InterfaceGraphique extends javax.swing.JFrame {
 
         jSplitPane1.setTopComponent(jPanel4);
 
-        jPanel5.setLayout(new java.awt.GridLayout(1, 2));
+        jPanel5.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel5.setLayout(new javax.swing.BoxLayout(jPanel5, javax.swing.BoxLayout.LINE_AXIS));
 
+        jPanel7.setForeground(new java.awt.Color(102, 102, 102));
         jPanel7.setLayout(new javax.swing.BoxLayout(jPanel7, javax.swing.BoxLayout.PAGE_AXIS));
 
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Crypter"));
+        jPanel3.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Crypter", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 16), new java.awt.Color(204, 204, 204))); // NOI18N
         jPanel3.setLayout(new javax.swing.BoxLayout(jPanel3, javax.swing.BoxLayout.LINE_AXIS));
 
+        jScrollPane1.setBackground(new java.awt.Color(102, 102, 102));
+
+        jTextArea_MessageACrypter.setBackground(new java.awt.Color(153, 153, 153));
         jTextArea_MessageACrypter.setColumns(20);
+        jTextArea_MessageACrypter.setForeground(new java.awt.Color(255, 255, 255));
         jTextArea_MessageACrypter.setRows(5);
         jScrollPane1.setViewportView(jTextArea_MessageACrypter);
 
         jPanel3.add(jScrollPane1);
 
+        jButton_Crypter.setBackground(new java.awt.Color(204, 204, 204));
+        jButton_Crypter.setFont(new java.awt.Font("Bebas", 0, 16)); // NOI18N
         jButton_Crypter.setText("Crypter");
+        jButton_Crypter.setMargin(new java.awt.Insets(20, 14, 20, 14));
         jButton_Crypter.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton_CrypterMouseClicked(evt);
@@ -125,12 +166,14 @@ public class InterfaceGraphique extends javax.swing.JFrame {
 
         jPanel7.add(jPanel3);
 
-        jPanel8.setBorder(javax.swing.BorderFactory.createTitledBorder("Masque Jetable"));
+        jPanel8.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel8.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Masque Jetable", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 16), new java.awt.Color(204, 204, 204))); // NOI18N
         jPanel8.setLayout(new javax.swing.BoxLayout(jPanel8, javax.swing.BoxLayout.LINE_AXIS));
 
         jTextArea_MasqueJetableCrypter.setEditable(false);
-        jTextArea_MasqueJetableCrypter.setBackground(new java.awt.Color(204, 204, 204));
+        jTextArea_MasqueJetableCrypter.setBackground(new java.awt.Color(102, 102, 102));
         jTextArea_MasqueJetableCrypter.setColumns(20);
+        jTextArea_MasqueJetableCrypter.setForeground(new java.awt.Color(255, 255, 255));
         jTextArea_MasqueJetableCrypter.setRows(5);
         jScrollPane2.setViewportView(jTextArea_MasqueJetableCrypter);
 
@@ -138,12 +181,14 @@ public class InterfaceGraphique extends javax.swing.JFrame {
 
         jPanel7.add(jPanel8);
 
-        jPanel9.setBorder(javax.swing.BorderFactory.createTitledBorder("Message crypté"));
+        jPanel9.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel9.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Message crypté", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 16), new java.awt.Color(204, 204, 204))); // NOI18N
         jPanel9.setLayout(new javax.swing.BoxLayout(jPanel9, javax.swing.BoxLayout.LINE_AXIS));
 
         jTextArea_MessageCrypte.setEditable(false);
-        jTextArea_MessageCrypte.setBackground(new java.awt.Color(204, 204, 204));
+        jTextArea_MessageCrypte.setBackground(new java.awt.Color(102, 102, 102));
         jTextArea_MessageCrypte.setColumns(20);
+        jTextArea_MessageCrypte.setForeground(new java.awt.Color(255, 255, 255));
         jTextArea_MessageCrypte.setRows(5);
         jScrollPane3.setViewportView(jTextArea_MessageCrypte);
 
@@ -152,19 +197,25 @@ public class InterfaceGraphique extends javax.swing.JFrame {
         jPanel7.add(jPanel9);
 
         jPanel5.add(jPanel7);
+        jPanel5.add(filler5);
 
         jPanel6.setLayout(new javax.swing.BoxLayout(jPanel6, javax.swing.BoxLayout.PAGE_AXIS));
 
-        jPanel10.setBorder(javax.swing.BorderFactory.createTitledBorder("Décrypter"));
+        jPanel10.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel10.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Décrypter", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 16), new java.awt.Color(204, 204, 204))); // NOI18N
         jPanel10.setLayout(new javax.swing.BoxLayout(jPanel10, javax.swing.BoxLayout.LINE_AXIS));
 
+        jTextArea_MessageADecrypter.setBackground(new java.awt.Color(153, 153, 153));
         jTextArea_MessageADecrypter.setColumns(20);
         jTextArea_MessageADecrypter.setRows(5);
         jScrollPane4.setViewportView(jTextArea_MessageADecrypter);
 
         jPanel10.add(jScrollPane4);
 
-        jButton_Decrypter.setText("Décrypter");
+        jButton_Decrypter.setBackground(new java.awt.Color(204, 204, 204));
+        jButton_Decrypter.setFont(new java.awt.Font("Bebas", 0, 16)); // NOI18N
+        jButton_Decrypter.setText("Decrypter");
+        jButton_Decrypter.setMargin(new java.awt.Insets(20, 14, 20, 14));
         jButton_Decrypter.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton_DecrypterMouseClicked(evt);
@@ -174,11 +225,12 @@ public class InterfaceGraphique extends javax.swing.JFrame {
 
         jPanel6.add(jPanel10);
 
-        jPanel11.setBorder(javax.swing.BorderFactory.createTitledBorder("Masque jetable"));
+        jPanel11.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel11.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Masque jetable", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 16), new java.awt.Color(204, 204, 204))); // NOI18N
         jPanel11.setLayout(new javax.swing.BoxLayout(jPanel11, javax.swing.BoxLayout.LINE_AXIS));
 
         jTextArea_MasqueJetableDecrypter.setEditable(false);
-        jTextArea_MasqueJetableDecrypter.setBackground(new java.awt.Color(204, 204, 204));
+        jTextArea_MasqueJetableDecrypter.setBackground(new java.awt.Color(102, 102, 102));
         jTextArea_MasqueJetableDecrypter.setColumns(20);
         jTextArea_MasqueJetableDecrypter.setRows(5);
         jScrollPane5.setViewportView(jTextArea_MasqueJetableDecrypter);
@@ -187,11 +239,12 @@ public class InterfaceGraphique extends javax.swing.JFrame {
 
         jPanel6.add(jPanel11);
 
-        jPanel12.setBorder(javax.swing.BorderFactory.createTitledBorder("Message décrypté"));
+        jPanel12.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel12.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Message décrypté", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 16), new java.awt.Color(204, 204, 204))); // NOI18N
         jPanel12.setLayout(new javax.swing.BoxLayout(jPanel12, javax.swing.BoxLayout.LINE_AXIS));
 
         jTextArea_MessageDecrypte.setEditable(false);
-        jTextArea_MessageDecrypte.setBackground(new java.awt.Color(204, 204, 204));
+        jTextArea_MessageDecrypte.setBackground(new java.awt.Color(102, 102, 102));
         jTextArea_MessageDecrypte.setColumns(20);
         jTextArea_MessageDecrypte.setRows(5);
         jScrollPane6.setViewportView(jTextArea_MessageDecrypte);
@@ -213,10 +266,27 @@ public class InterfaceGraphique extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton_ModifierPaquetActionPerformed
 
+    private void animationAffichageMasque(JTextArea afficheur, String msg, int duree){
+        if(msg.length() != 0){
+            int dureePause = (int) ((double) duree/msg.length()) * 1000;
+            dureePause = 0;
+            afficheur.setText("");
+            for(int i=0; i<msg.length(); i++){
+                afficheur.setText(afficheur.getText() + msg.charAt(i));
+                try {
+                    Thread.sleep((long) dureePause);
+                } catch (InterruptedException ex) {
+                    Logger.getLogger(InterfaceGraphique.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        }
+    }
+    
     private void jButton_CrypterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton_CrypterMouseClicked
         String messageACrypter = this.jTextArea_MessageACrypter.getText();
         Message messageCrypte = this.user.crypter(messageACrypter);
-        this.jTextArea_MasqueJetableCrypter.setText(messageCrypte.getMasqueJetable());
+        //this.jTextArea_MasqueJetableCrypter.setText(messageCrypte.getMasqueJetable());
+        this.animationAffichageMasque(this.jTextArea_MasqueJetableCrypter, messageCrypte.getMasqueJetable(), 5);
         this.jTextArea_MessageCrypte.setText(messageCrypte.getMessageArrivee());
     }//GEN-LAST:event_jButton_CrypterMouseClicked
 
@@ -230,6 +300,9 @@ public class InterfaceGraphique extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.Box.Filler filler1;
     private javax.swing.Box.Filler filler2;
+    private javax.swing.Box.Filler filler3;
+    private javax.swing.Box.Filler filler4;
+    private javax.swing.Box.Filler filler5;
     private javax.swing.JButton jButton_AfficherPaquet;
     private javax.swing.JButton jButton_Crypter;
     private javax.swing.JButton jButton_Decrypter;
