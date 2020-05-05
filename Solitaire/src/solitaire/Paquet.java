@@ -85,8 +85,8 @@ public class Paquet {
         String version_str = "";
         
         for(Carte c : this.cartes){
-            if(c.getId() < 53 || c.getType() == TYPE_CARTE.JOKER_N) version_str += c.getId() + ':';
-            else version_str += 54 + ':';
+            if(c.getId() < 53 || c.getType() == TYPE_CARTE.JOKER_N) version_str += c.getId() + "" + ':';
+            else version_str += 54 + "" +':';
         }
         
         return version_str;

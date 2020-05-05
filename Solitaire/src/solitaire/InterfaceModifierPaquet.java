@@ -19,7 +19,7 @@ public class InterfaceModifierPaquet extends javax.swing.JFrame {
     public InterfaceModifierPaquet(Utilisateur u) {
         initComponents();
         this.utilisateur = u;
-        this.jTextField1.setText(u.getPaquet().getPaquetS());
+        this.jTextField_PaquetS.setText(u.getPaquet().getPaquetS());
     }
 
     /**
@@ -39,7 +39,7 @@ public class InterfaceModifierPaquet extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
+        jTextField_PaquetS = new javax.swing.JTextField();
         jPanel5 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
 
@@ -87,12 +87,12 @@ public class InterfaceModifierPaquet extends javax.swing.JFrame {
 
         jPanel4.setLayout(new java.awt.GridLayout());
 
-        jTextField1.setBackground(new java.awt.Color(153, 153, 153));
-        jTextField1.setFont(new java.awt.Font("Monospaced", 0, 13)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField1.setName("jTextField_PaquetS"); // NOI18N
-        jPanel4.add(jTextField1);
+        jTextField_PaquetS.setBackground(new java.awt.Color(153, 153, 153));
+        jTextField_PaquetS.setFont(new java.awt.Font("Monospaced", 0, 13)); // NOI18N
+        jTextField_PaquetS.setForeground(new java.awt.Color(255, 255, 255));
+        jTextField_PaquetS.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField_PaquetS.setName("jTextField_PaquetS"); // NOI18N
+        jPanel4.add(jTextField_PaquetS);
 
         jPanel6.add(jPanel4);
 
@@ -118,7 +118,8 @@ public class InterfaceModifierPaquet extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        this.utilisateur.setPaquet(new Paquet(this.jTextField1.getText()));
+        Paquet tmp = new Paquet(this.jTextField_PaquetS.getText());
+        this.utilisateur.setPaquet(tmp);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -134,6 +135,6 @@ public class InterfaceModifierPaquet extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JSplitPane jSplitPane1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField_PaquetS;
     // End of variables declaration//GEN-END:variables
 }
