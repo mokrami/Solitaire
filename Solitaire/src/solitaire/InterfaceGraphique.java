@@ -89,7 +89,7 @@ public class InterfaceGraphique extends javax.swing.JFrame {
         jPanel4.add(filler4);
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel1.setLayout(new java.awt.GridLayout());
+        jPanel1.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel1.setFont(new java.awt.Font("Bebas", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(204, 204, 204));
@@ -262,10 +262,6 @@ public class InterfaceGraphique extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton_ModifierPaquetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ModifierPaquetActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton_ModifierPaquetActionPerformed
-
     private void animationAffichageMasque(JTextArea afficheur, String msg, int duree){
         if(msg.length() != 0){
             int dureePause = (int) ((double) duree/msg.length()) * 1000;
@@ -296,6 +292,11 @@ public class InterfaceGraphique extends javax.swing.JFrame {
         this.jTextArea_MasqueJetableDecrypter.setText(messageDecrypte.getMasqueJetable());
         this.jTextArea_MessageDecrypte.setText(messageDecrypte.getMessageArrivee());
     }//GEN-LAST:event_jButton_DecrypterMouseClicked
+
+    private void jButton_ModifierPaquetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ModifierPaquetActionPerformed
+        InterfaceModifierPaquet mp = new InterfaceModifierPaquet(this.user);
+        mp.setVisible(true);
+    }//GEN-LAST:event_jButton_ModifierPaquetActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.Box.Filler filler1;
