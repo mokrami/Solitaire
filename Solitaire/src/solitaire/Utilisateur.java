@@ -29,10 +29,7 @@ public class Utilisateur {
         
         int valeurChar = 0;
         for(int i=0; i<message.length(); i++) {
-            System.out.println(message.toUpperCase().charAt(i) + " : " + (message.toUpperCase().charAt(i) - 65));
-            System.out.println(masque_jetable.charAt(i) + " : " + (masque_jetable.charAt(i) - 65));
             valeurChar = (message.toUpperCase().charAt(i) - 65) + (masque_jetable.charAt(i) - 65);
-            System.out.println("VALEUR : " + valeurChar);
             if(valeurChar < 26) message_resultat+=(char)(valeurChar + 65);
             else message_resultat+=(char)((valeurChar -26) + 65);
         }
@@ -54,12 +51,9 @@ public class Utilisateur {
         
         int valeurChar = 0;
         for(int i=0; i<message.length(); i++) {
-            System.out.println(message.toUpperCase().charAt(i) + " : " + (message.toUpperCase().charAt(i) - 65));
-            System.out.println(masque_jetable.charAt(i) + " : " + (masque_jetable.charAt(i) - 65));
-            valeurChar = (message.toUpperCase().charAt(i) - 65) - (masque_jetable.charAt(i) - 65);
-            System.out.println("VALEUR : " + valeurChar);
-            if(valeurChar < 26) message_resultat+=(char)(valeurChar + 65);
-            else message_resultat+=(char)((valeurChar -26) + 65);
+            valeurChar = (message.toUpperCase().charAt(i) - 65) - (masque_jetable.toUpperCase().charAt(i) - 65);
+            if(valeurChar > 0) message_resultat+=(char)((valeurChar) + 65);
+            else message_resultat+=(char)((valeurChar + 26) + 65);
         }
         res.setMessageArrivee(message_resultat);
         

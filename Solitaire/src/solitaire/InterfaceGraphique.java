@@ -5,9 +5,13 @@
  */
 package solitaire;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JFrame;
 import javax.swing.JTextArea;
+import javax.swing.Timer;
 
 /**
  *
@@ -15,6 +19,7 @@ import javax.swing.JTextArea;
  */
 public class InterfaceGraphique extends javax.swing.JFrame {
     private Utilisateur user;
+    private int compteur;
 
     /**
      * Creates new form InterfaceGraphique
@@ -207,6 +212,7 @@ public class InterfaceGraphique extends javax.swing.JFrame {
 
         jTextArea_MessageADecrypter.setBackground(new java.awt.Color(153, 153, 153));
         jTextArea_MessageADecrypter.setColumns(20);
+        jTextArea_MessageADecrypter.setForeground(new java.awt.Color(255, 255, 255));
         jTextArea_MessageADecrypter.setRows(5);
         jScrollPane4.setViewportView(jTextArea_MessageADecrypter);
 
@@ -232,6 +238,7 @@ public class InterfaceGraphique extends javax.swing.JFrame {
         jTextArea_MasqueJetableDecrypter.setEditable(false);
         jTextArea_MasqueJetableDecrypter.setBackground(new java.awt.Color(102, 102, 102));
         jTextArea_MasqueJetableDecrypter.setColumns(20);
+        jTextArea_MasqueJetableDecrypter.setForeground(new java.awt.Color(255, 255, 255));
         jTextArea_MasqueJetableDecrypter.setRows(5);
         jScrollPane5.setViewportView(jTextArea_MasqueJetableDecrypter);
 
@@ -246,6 +253,7 @@ public class InterfaceGraphique extends javax.swing.JFrame {
         jTextArea_MessageDecrypte.setEditable(false);
         jTextArea_MessageDecrypte.setBackground(new java.awt.Color(102, 102, 102));
         jTextArea_MessageDecrypte.setColumns(20);
+        jTextArea_MessageDecrypte.setForeground(new java.awt.Color(255, 255, 255));
         jTextArea_MessageDecrypte.setRows(5);
         jScrollPane6.setViewportView(jTextArea_MessageDecrypte);
 
@@ -262,23 +270,28 @@ public class InterfaceGraphique extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton_ModifierPaquetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ModifierPaquetActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton_ModifierPaquetActionPerformed
-
-    private void animationAffichageMasque(JTextArea afficheur, String msg, int duree){
-        if(msg.length() != 0){
-            int dureePause = (int) ((double) duree/msg.length()) * 1000;
-            dureePause = 0;
-            afficheur.setText("");
-            for(int i=0; i<msg.length(); i++){
-                afficheur.setText(afficheur.getText() + msg.charAt(i));
-                try {
-                    Thread.sleep((long) dureePause);
-                } catch (InterruptedException ex) {
-                    Logger.getLogger(InterfaceGraphique.class.getName()).log(Level.SEVERE, null, ex);
+    private void animationAffichage(JTextArea afficheurMasque, String masque, JTextArea afficheurRes, String res, int duree){
+        if(masque.length() != 0){
+            int dureePause = (int) (((double) duree/masque.length()) * 1000);
+            afficheurMasque.setText("");
+            afficheurRes.setText("");
+            JFrame fenetre = this;
+            compteur = 0;
+            Timer timer = new Timer(dureePause, new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    if(compteur < masque.length()) {
+                        afficheurMasque.setText(afficheurMasque.getText() + masque.charAt(compteur));
+                        afficheurRes.setText(afficheurRes.getText() + res.charAt(compteur));
+                        compteur++;
+                        fenetre.repaint();
+                    } else {
+                        ((Timer)e.getSource()).stop();
+                    }
                 }
-            }
+            });
+            timer.setRepeats(true);
+            timer.start();
         }
     }
     
@@ -286,16 +299,19 @@ public class InterfaceGraphique extends javax.swing.JFrame {
         String messageACrypter = this.jTextArea_MessageACrypter.getText();
         Message messageCrypte = this.user.crypter(messageACrypter);
         //this.jTextArea_MasqueJetableCrypter.setText(messageCrypte.getMasqueJetable());
-        this.animationAffichageMasque(this.jTextArea_MasqueJetableCrypter, messageCrypte.getMasqueJetable(), 5);
-        this.jTextArea_MessageCrypte.setText(messageCrypte.getMessageArrivee());
+        this.animationAffichage(this.jTextArea_MasqueJetableCrypter, messageCrypte.getMasqueJetable(), this.jTextArea_MessageCrypte, messageCrypte.getMessageArrivee(), 5);
     }//GEN-LAST:event_jButton_CrypterMouseClicked
 
     private void jButton_DecrypterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton_DecrypterMouseClicked
         String messageADecrypter = this.jTextArea_MessageADecrypter.getText();
         Message messageDecrypte = this.user.decrypter(messageADecrypter);
-        this.jTextArea_MasqueJetableDecrypter.setText(messageDecrypte.getMasqueJetable());
-        this.jTextArea_MessageDecrypte.setText(messageDecrypte.getMessageArrivee());
+        this.animationAffichage(this.jTextArea_MasqueJetableDecrypter, messageDecrypte.getMasqueJetable(), this.jTextArea_MessageDecrypte, messageDecrypte.getMessageArrivee(), 5);
     }//GEN-LAST:event_jButton_DecrypterMouseClicked
+
+    private void jButton_ModifierPaquetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ModifierPaquetActionPerformed
+        InterfaceModifierPaquet mp = new InterfaceModifierPaquet(this.user);
+        mp.setVisible(true);
+    }//GEN-LAST:event_jButton_ModifierPaquetActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.Box.Filler filler1;
