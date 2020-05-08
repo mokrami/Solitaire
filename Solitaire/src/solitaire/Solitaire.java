@@ -20,6 +20,13 @@ public class Solitaire {
         
         InterfaceGraphique appU2 = new InterfaceGraphique();
         appU2.setVisible(true);
+               
+        Paquet p = new Paquet();
+        System.out.println("../cartes/" + p.getPaquet().get(0).getValeur().getValString() + ".gif");
+        Afficher a = new Afficher(p);
+        a.setVisible(true);
+
+             
     }
     
 }
