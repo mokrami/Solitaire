@@ -5,6 +5,8 @@
  */
 package solitaire;
 
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author im678382
@@ -22,7 +24,7 @@ public class Solitaire {
         appU2.setVisible(true);
                
         Paquet p = new Paquet();
-        System.out.println("../cartes/" + p.getPaquet().get(0).getValeur().getValString() + ".gif");
+        System.out.println(p.getPaquetS());
         Afficher a = new Afficher(p);
         a.setVisible(true);
 

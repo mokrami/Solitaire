@@ -18,61 +18,61 @@ public class Afficher extends javax.swing.JFrame {
      */
     public Afficher(Paquet paquet) {
         initComponents();
+        this.jLabel1.setIcon(new ImageIcon(getClass().getResource("../cartes/" + paquet.getPaquet().get(0).getValeur().getValString() + ".gif")));
+        this.jLabel2.setIcon(new ImageIcon(getClass().getResource("../cartes/" + paquet.getPaquet().get(1).getValeur().getValString() + ".gif")));
+        this.jLabel3.setIcon(new ImageIcon(getClass().getResource("../cartes/" + paquet.getPaquet().get(2).getValeur().getValString() + ".gif")));
+        this.jLabel4.setIcon(new ImageIcon(getClass().getResource("../cartes/" + paquet.getPaquet().get(3).getValeur().getValString() + ".gif")));
+        this.jLabel5.setIcon(new ImageIcon(getClass().getResource("../cartes/" + paquet.getPaquet().get(4).getValeur().getValString() + ".gif")));
+        this.jLabel6.setIcon(new ImageIcon(getClass().getResource("../cartes/" + paquet.getPaquet().get(5).getValeur().getValString() + ".gif")));
+        this.jLabel7.setIcon(new ImageIcon(getClass().getResource("../cartes/" + paquet.getPaquet().get(6).getValeur().getValString() + ".gif")));
+        this.jLabel8.setIcon(new ImageIcon(getClass().getResource("../cartes/" + paquet.getPaquet().get(7).getValeur().getValString() + ".gif")));
+        this.jLabel9.setIcon(new ImageIcon(getClass().getResource("../cartes/" + paquet.getPaquet().get(8).getValeur().getValString() + ".gif")));
+        this.jLabel10.setIcon(new ImageIcon(getClass().getResource("../cartes/" + paquet.getPaquet().get(9).getValeur().getValString() + ".gif")));
+        this.jLabel11.setIcon(new ImageIcon(getClass().getResource("../cartes/" + paquet.getPaquet().get(10).getValeur().getValString() + ".gif")));
+        this.jLabel12.setIcon(new ImageIcon(getClass().getResource("../cartes/" + paquet.getPaquet().get(11).getValeur().getValString() + ".gif")));
+        this.jLabel13.setIcon(new ImageIcon(getClass().getResource("../cartes/" + paquet.getPaquet().get(12).getValeur().getValString() + ".gif")));
+        this.jLabel14.setIcon(new ImageIcon(getClass().getResource("../cartes/" + paquet.getPaquet().get(13).getValeur().getValString() + ".gif")));
+        this.jLabel15.setIcon(new ImageIcon(getClass().getResource("../cartes/" + paquet.getPaquet().get(14).getValeur().getValString() + ".gif")));
+        this.jLabel16.setIcon(new ImageIcon(getClass().getResource("../cartes/" + paquet.getPaquet().get(15).getValeur().getValString() + ".gif")));
+        this.jLabel17.setIcon(new ImageIcon(getClass().getResource("../cartes/" + paquet.getPaquet().get(16).getValeur().getValString() + ".gif")));
+        this.jLabel18.setIcon(new ImageIcon(getClass().getResource("../cartes/" + paquet.getPaquet().get(17).getValeur().getValString() + ".gif")));
+        this.jLabel19.setIcon(new ImageIcon(getClass().getResource("../cartes/" + paquet.getPaquet().get(18).getValeur().getValString() + ".gif")));
+        this.jLabel20.setIcon(new ImageIcon(getClass().getResource("../cartes/" + paquet.getPaquet().get(19).getValeur().getValString() + ".gif")));
+        this.jLabel21.setIcon(new ImageIcon(getClass().getResource("../cartes/" + paquet.getPaquet().get(20).getValeur().getValString() + ".gif")));
+        this.jLabel22.setIcon(new ImageIcon(getClass().getResource("../cartes/" + paquet.getPaquet().get(21).getValeur().getValString() + ".gif")));
+        this.jLabel23.setIcon(new ImageIcon(getClass().getResource("../cartes/" + paquet.getPaquet().get(22).getValeur().getValString() + ".gif")));
+        this.jLabel24.setIcon(new ImageIcon(getClass().getResource("../cartes/" + paquet.getPaquet().get(23).getValeur().getValString() + ".gif")));
+        this.jLabel25.setIcon(new ImageIcon(getClass().getResource("../cartes/" + paquet.getPaquet().get(24).getValeur().getValString() + ".gif")));
+        this.jLabel26.setIcon(new ImageIcon(getClass().getResource("../cartes/" + paquet.getPaquet().get(25).getValeur().getValString() + ".gif")));
+        this.jLabel27.setIcon(new ImageIcon(getClass().getResource("../cartes/" + paquet.getPaquet().get(26).getValeur().getValString() + ".gif")));
+        this.jLabel28.setIcon(new ImageIcon(getClass().getResource("../cartes/" + paquet.getPaquet().get(27).getValeur().getValString() + ".gif")));
+        this.jLabel29.setIcon(new ImageIcon(getClass().getResource("../cartes/" + paquet.getPaquet().get(28).getValeur().getValString() + ".gif")));
+        this.jLabel30.setIcon(new ImageIcon(getClass().getResource("../cartes/" + paquet.getPaquet().get(29).getValeur().getValString() + ".gif")));
+        this.jLabel31.setIcon(new ImageIcon(getClass().getResource("../cartes/" + paquet.getPaquet().get(30).getValeur().getValString() + ".gif")));
+        this.jLabel32.setIcon(new ImageIcon(getClass().getResource("../cartes/" + paquet.getPaquet().get(31).getValeur().getValString() + ".gif")));
+        this.jLabel33.setIcon(new ImageIcon(getClass().getResource("../cartes/" + paquet.getPaquet().get(32).getValeur().getValString() + ".gif")));
+        this.jLabel34.setIcon(new ImageIcon(getClass().getResource("../cartes/" + paquet.getPaquet().get(33).getValeur().getValString() + ".gif")));
+        this.jLabel35.setIcon(new ImageIcon(getClass().getResource("../cartes/" + paquet.getPaquet().get(34).getValeur().getValString() + ".gif")));
+        this.jLabel36.setIcon(new ImageIcon(getClass().getResource("../cartes/" + paquet.getPaquet().get(35).getValeur().getValString() + ".gif")));
+        this.jLabel37.setIcon(new ImageIcon(getClass().getResource("../cartes/" + paquet.getPaquet().get(36).getValeur().getValString() + ".gif")));
+        this.jLabel38.setIcon(new ImageIcon(getClass().getResource("../cartes/" + paquet.getPaquet().get(37).getValeur().getValString() + ".gif")));
+        this.jLabel39.setIcon(new ImageIcon(getClass().getResource("../cartes/" + paquet.getPaquet().get(38).getValeur().getValString() + ".gif")));
+        this.jLabel40.setIcon(new ImageIcon(getClass().getResource("../cartes/" + paquet.getPaquet().get(39).getValeur().getValString() + ".gif")));
+        this.jLabel41.setIcon(new ImageIcon(getClass().getResource("../cartes/" + paquet.getPaquet().get(40).getValeur().getValString() + ".gif")));
+        this.jLabel42.setIcon(new ImageIcon(getClass().getResource("../cartes/" + paquet.getPaquet().get(41).getValeur().getValString() + ".gif")));
+        this.jLabel43.setIcon(new ImageIcon(getClass().getResource("../cartes/" + paquet.getPaquet().get(42).getValeur().getValString() + ".gif")));
+        this.jLabel44.setIcon(new ImageIcon(getClass().getResource("../cartes/" + paquet.getPaquet().get(43).getValeur().getValString() + ".gif")));
+        this.jLabel45.setIcon(new ImageIcon(getClass().getResource("../cartes/" + paquet.getPaquet().get(44).getValeur().getValString() + ".gif")));
+        this.jLabel46.setIcon(new ImageIcon(getClass().getResource("../cartes/" + paquet.getPaquet().get(45).getValeur().getValString() + ".gif")));
+        this.jLabel47.setIcon(new ImageIcon(getClass().getResource("../cartes/" + paquet.getPaquet().get(46).getValeur().getValString() + ".gif")));
+        this.jLabel48.setIcon(new ImageIcon(getClass().getResource("../cartes/" + paquet.getPaquet().get(47).getValeur().getValString() + ".gif")));
+        this.jLabel49.setIcon(new ImageIcon(getClass().getResource("../cartes/" + paquet.getPaquet().get(48).getValeur().getValString() + ".gif")));
+        this.jLabel50.setIcon(new ImageIcon(getClass().getResource("../cartes/" + paquet.getPaquet().get(49).getValeur().getValString() + ".gif")));
+        this.jLabel51.setIcon(new ImageIcon(getClass().getResource("../cartes/" + paquet.getPaquet().get(50).getValeur().getValString() + ".gif")));
+        this.jLabel52.setIcon(new ImageIcon(getClass().getResource("../cartes/" + paquet.getPaquet().get(51).getValeur().getValString() + ".gif")));
+        this.jLabel53.setIcon(new ImageIcon(getClass().getResource("../cartes/" + paquet.getPaquet().get(52).getValeur().getValString() + ".gif")));
+        this.jLabel54.setIcon(new ImageIcon(getClass().getResource("../cartes/" + paquet.getPaquet().get(53).getValeur().getValString() + ".gif")));
         this.jTextField1.setText(paquet.getPaquetS());
-        this.jLabel1.setIcon(new ImageIcon("../cartes/" + paquet.getPaquet().get(0).getValeur().getValString() + ".gif"));
-        this.jLabel2.setIcon(new ImageIcon("../cartes/" + paquet.getPaquet().get(1).getValeur().getValString() + ".gif"));
-        this.jLabel3.setIcon(new ImageIcon("../cartes/" + paquet.getPaquet().get(2).getValeur().getValString() + ".gif"));
-        this.jLabel4.setIcon(new ImageIcon("../cartes/" + paquet.getPaquet().get(3).getValeur().getValString() + ".gif"));
-        this.jLabel5.setIcon(new ImageIcon("../cartes/" + paquet.getPaquet().get(4).getValeur().getValString() + ".gif"));
-        this.jLabel6.setIcon(new ImageIcon("../cartes/" + paquet.getPaquet().get(5).getValeur().getValString() + ".gif"));
-        this.jLabel7.setIcon(new ImageIcon("../cartes/" + paquet.getPaquet().get(6).getValeur().getValString() + ".gif"));
-        this.jLabel8.setIcon(new ImageIcon("../cartes/" + paquet.getPaquet().get(7).getValeur().getValString() + ".gif"));
-        this.jLabel9.setIcon(new ImageIcon("../cartes/" + paquet.getPaquet().get(8).getValeur().getValString() + ".gif"));
-        this.jLabel10.setIcon(new ImageIcon("../cartes/" + paquet.getPaquet().get(9).getValeur().getValString() + ".gif"));
-        this.jLabel11.setIcon(new ImageIcon("../cartes/" + paquet.getPaquet().get(10).getValeur().getValString() + ".gif"));
-        this.jLabel12.setIcon(new ImageIcon("../cartes/" + paquet.getPaquet().get(11).getValeur().getValString() + ".gif"));
-        this.jLabel13.setIcon(new ImageIcon("../cartes/" + paquet.getPaquet().get(12).getValeur().getValString() + ".gif"));
-        this.jLabel14.setIcon(new ImageIcon("../cartes/" + paquet.getPaquet().get(13).getValeur().getValString() + ".gif"));
-        this.jLabel15.setIcon(new ImageIcon("../cartes/" + paquet.getPaquet().get(14).getValeur().getValString() + ".gif"));
-        this.jLabel16.setIcon(new ImageIcon("../cartes/" + paquet.getPaquet().get(15).getValeur().getValString() + ".gif"));
-        this.jLabel17.setIcon(new ImageIcon("../cartes/" + paquet.getPaquet().get(16).getValeur().getValString() + ".gif"));
-        this.jLabel18.setIcon(new ImageIcon("../cartes/" + paquet.getPaquet().get(17).getValeur().getValString() + ".gif"));
-        this.jLabel19.setIcon(new ImageIcon("../cartes/" + paquet.getPaquet().get(18).getValeur().getValString() + ".gif"));
-        this.jLabel20.setIcon(new ImageIcon("../cartes/" + paquet.getPaquet().get(19).getValeur().getValString() + ".gif"));
-        this.jLabel21.setIcon(new ImageIcon("../cartes/" + paquet.getPaquet().get(20).getValeur().getValString() + ".gif"));
-        this.jLabel22.setIcon(new ImageIcon("../cartes/" + paquet.getPaquet().get(21).getValeur().getValString() + ".gif"));
-        this.jLabel23.setIcon(new ImageIcon("../cartes/" + paquet.getPaquet().get(22).getValeur().getValString() + ".gif"));
-        this.jLabel24.setIcon(new ImageIcon("../cartes/" + paquet.getPaquet().get(23).getValeur().getValString() + ".gif"));
-        this.jLabel25.setIcon(new ImageIcon("../cartes/" + paquet.getPaquet().get(24).getValeur().getValString() + ".gif"));
-        this.jLabel26.setIcon(new ImageIcon("../cartes/" + paquet.getPaquet().get(25).getValeur().getValString() + ".gif"));
-        this.jLabel27.setIcon(new ImageIcon("../cartes/" + paquet.getPaquet().get(26).getValeur().getValString() + ".gif"));
-        this.jLabel28.setIcon(new ImageIcon("../cartes/" + paquet.getPaquet().get(27).getValeur().getValString() + ".gif"));
-        this.jLabel29.setIcon(new ImageIcon("../cartes/" + paquet.getPaquet().get(28).getValeur().getValString() + ".gif"));
-        this.jLabel30.setIcon(new ImageIcon("../cartes/" + paquet.getPaquet().get(29).getValeur().getValString() + ".gif"));
-        this.jLabel31.setIcon(new ImageIcon("../cartes/" + paquet.getPaquet().get(30).getValeur().getValString() + ".gif"));
-        this.jLabel32.setIcon(new ImageIcon("../cartes/" + paquet.getPaquet().get(31).getValeur().getValString() + ".gif"));
-        this.jLabel33.setIcon(new ImageIcon("../cartes/" + paquet.getPaquet().get(32).getValeur().getValString() + ".gif"));
-        this.jLabel34.setIcon(new ImageIcon("../cartes/" + paquet.getPaquet().get(33).getValeur().getValString() + ".gif"));
-        this.jLabel35.setIcon(new ImageIcon("../cartes/" + paquet.getPaquet().get(34).getValeur().getValString() + ".gif"));
-        this.jLabel36.setIcon(new ImageIcon("../cartes/" + paquet.getPaquet().get(35).getValeur().getValString() + ".gif"));
-        this.jLabel37.setIcon(new ImageIcon("../cartes/" + paquet.getPaquet().get(36).getValeur().getValString() + ".gif"));
-        this.jLabel38.setIcon(new ImageIcon("../cartes/" + paquet.getPaquet().get(37).getValeur().getValString() + ".gif"));
-        this.jLabel39.setIcon(new ImageIcon("../cartes/" + paquet.getPaquet().get(38).getValeur().getValString() + ".gif"));
-        this.jLabel40.setIcon(new ImageIcon("../cartes/" + paquet.getPaquet().get(39).getValeur().getValString() + ".gif"));
-        this.jLabel41.setIcon(new ImageIcon("../cartes/" + paquet.getPaquet().get(40).getValeur().getValString() + ".gif"));
-        this.jLabel42.setIcon(new ImageIcon("../cartes/" + paquet.getPaquet().get(41).getValeur().getValString() + ".gif"));
-        this.jLabel43.setIcon(new ImageIcon("../cartes/" + paquet.getPaquet().get(42).getValeur().getValString() + ".gif"));
-        this.jLabel44.setIcon(new ImageIcon("../cartes/" + paquet.getPaquet().get(43).getValeur().getValString() + ".gif"));
-        this.jLabel45.setIcon(new ImageIcon("../cartes/" + paquet.getPaquet().get(44).getValeur().getValString() + ".gif"));
-        this.jLabel46.setIcon(new ImageIcon("../cartes/" + paquet.getPaquet().get(45).getValeur().getValString() + ".gif"));
-        this.jLabel47.setIcon(new ImageIcon("../cartes/" + paquet.getPaquet().get(46).getValeur().getValString() + ".gif"));
-        this.jLabel48.setIcon(new ImageIcon("../cartes/" + paquet.getPaquet().get(47).getValeur().getValString() + ".gif"));
-        this.jLabel49.setIcon(new ImageIcon("../cartes/" + paquet.getPaquet().get(48).getValeur().getValString() + ".gif"));
-        this.jLabel50.setIcon(new ImageIcon("../cartes/" + paquet.getPaquet().get(49).getValeur().getValString() + ".gif"));
-        this.jLabel51.setIcon(new ImageIcon("../cartes/" + paquet.getPaquet().get(50).getValeur().getValString() + ".gif"));
-        this.jLabel52.setIcon(new ImageIcon("../cartes/" + paquet.getPaquet().get(51).getValeur().getValString() + ".gif"));
-        this.jLabel53.setIcon(new ImageIcon("../cartes/" + paquet.getPaquet().get(52).getValeur().getValString() + ".gif"));
-        this.jLabel54.setIcon(new ImageIcon("../cartes/" + paquet.getPaquet().get(53).getValeur().getValString() + ".gif"));    
     }
 
     /**
@@ -197,10 +197,13 @@ public class Afficher extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1200, 900));
+        getContentPane().setLayout(new java.awt.FlowLayout());
 
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
         jPanel1.setLayout(new java.awt.GridLayout(6, 9));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Issam\\Desktop\\Crypto\\Solitaire\\Solitaire\\cartes\\2c.gif")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cartes/10 de carreau.gif"))); // NOI18N
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -221,7 +224,7 @@ public class Afficher extends javax.swing.JFrame {
 
         jPanel1.add(jPanel3);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Issam\\Desktop\\Crypto\\Solitaire\\Solitaire\\cartes\\2c.gif")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cartes/10 de carreau.gif"))); // NOI18N
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -242,8 +245,6 @@ public class Afficher extends javax.swing.JFrame {
 
         jPanel1.add(jPanel4);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Issam\\Desktop\\Crypto\\Solitaire\\Solitaire\\cartes\\2c.gif")); // NOI18N
-
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
@@ -262,8 +263,6 @@ public class Afficher extends javax.swing.JFrame {
         );
 
         jPanel1.add(jPanel5);
-
-        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\Issam\\Desktop\\Crypto\\Solitaire\\Solitaire\\cartes\\2c.gif")); // NOI18N
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -284,8 +283,6 @@ public class Afficher extends javax.swing.JFrame {
 
         jPanel1.add(jPanel6);
 
-        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\Issam\\Desktop\\Crypto\\Solitaire\\Solitaire\\cartes\\2c.gif")); // NOI18N
-
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
@@ -304,8 +301,6 @@ public class Afficher extends javax.swing.JFrame {
         );
 
         jPanel1.add(jPanel7);
-
-        jLabel6.setIcon(new javax.swing.ImageIcon("C:\\Users\\Issam\\Desktop\\Crypto\\Solitaire\\Solitaire\\cartes\\2c.gif")); // NOI18N
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -326,8 +321,6 @@ public class Afficher extends javax.swing.JFrame {
 
         jPanel1.add(jPanel8);
 
-        jLabel7.setIcon(new javax.swing.ImageIcon("C:\\Users\\Issam\\Desktop\\Crypto\\Solitaire\\Solitaire\\cartes\\2c.gif")); // NOI18N
-
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
@@ -346,8 +339,6 @@ public class Afficher extends javax.swing.JFrame {
         );
 
         jPanel1.add(jPanel9);
-
-        jLabel8.setIcon(new javax.swing.ImageIcon("C:\\Users\\Issam\\Desktop\\Crypto\\Solitaire\\Solitaire\\cartes\\2c.gif")); // NOI18N
 
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
         jPanel10.setLayout(jPanel10Layout);
@@ -368,8 +359,6 @@ public class Afficher extends javax.swing.JFrame {
 
         jPanel1.add(jPanel10);
 
-        jLabel9.setIcon(new javax.swing.ImageIcon("C:\\Users\\Issam\\Desktop\\Crypto\\Solitaire\\Solitaire\\cartes\\2c.gif")); // NOI18N
-
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
         jPanel11.setLayout(jPanel11Layout);
         jPanel11Layout.setHorizontalGroup(
@@ -388,8 +377,6 @@ public class Afficher extends javax.swing.JFrame {
         );
 
         jPanel1.add(jPanel11);
-
-        jLabel10.setIcon(new javax.swing.ImageIcon("C:\\Users\\Issam\\Desktop\\Crypto\\Solitaire\\Solitaire\\cartes\\2c.gif")); // NOI18N
 
         javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
         jPanel12.setLayout(jPanel12Layout);
@@ -410,8 +397,6 @@ public class Afficher extends javax.swing.JFrame {
 
         jPanel1.add(jPanel12);
 
-        jLabel11.setIcon(new javax.swing.ImageIcon("C:\\Users\\Issam\\Desktop\\Crypto\\Solitaire\\Solitaire\\cartes\\2c.gif")); // NOI18N
-
         javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
         jPanel13.setLayout(jPanel13Layout);
         jPanel13Layout.setHorizontalGroup(
@@ -430,8 +415,6 @@ public class Afficher extends javax.swing.JFrame {
         );
 
         jPanel1.add(jPanel13);
-
-        jLabel12.setIcon(new javax.swing.ImageIcon("C:\\Users\\Issam\\Desktop\\Crypto\\Solitaire\\Solitaire\\cartes\\2c.gif")); // NOI18N
 
         javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
         jPanel14.setLayout(jPanel14Layout);
@@ -452,8 +435,6 @@ public class Afficher extends javax.swing.JFrame {
 
         jPanel1.add(jPanel14);
 
-        jLabel13.setIcon(new javax.swing.ImageIcon("C:\\Users\\Issam\\Desktop\\Crypto\\Solitaire\\Solitaire\\cartes\\2c.gif")); // NOI18N
-
         javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
         jPanel15.setLayout(jPanel15Layout);
         jPanel15Layout.setHorizontalGroup(
@@ -472,8 +453,6 @@ public class Afficher extends javax.swing.JFrame {
         );
 
         jPanel1.add(jPanel15);
-
-        jLabel14.setIcon(new javax.swing.ImageIcon("C:\\Users\\Issam\\Desktop\\Crypto\\Solitaire\\Solitaire\\cartes\\2c.gif")); // NOI18N
 
         javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
         jPanel16.setLayout(jPanel16Layout);
@@ -494,8 +473,6 @@ public class Afficher extends javax.swing.JFrame {
 
         jPanel1.add(jPanel16);
 
-        jLabel15.setIcon(new javax.swing.ImageIcon("C:\\Users\\Issam\\Desktop\\Crypto\\Solitaire\\Solitaire\\cartes\\2c.gif")); // NOI18N
-
         javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
         jPanel17.setLayout(jPanel17Layout);
         jPanel17Layout.setHorizontalGroup(
@@ -514,8 +491,6 @@ public class Afficher extends javax.swing.JFrame {
         );
 
         jPanel1.add(jPanel17);
-
-        jLabel16.setIcon(new javax.swing.ImageIcon("C:\\Users\\Issam\\Desktop\\Crypto\\Solitaire\\Solitaire\\cartes\\2c.gif")); // NOI18N
 
         javax.swing.GroupLayout jPanel18Layout = new javax.swing.GroupLayout(jPanel18);
         jPanel18.setLayout(jPanel18Layout);
@@ -536,8 +511,6 @@ public class Afficher extends javax.swing.JFrame {
 
         jPanel1.add(jPanel18);
 
-        jLabel17.setIcon(new javax.swing.ImageIcon("C:\\Users\\Issam\\Desktop\\Crypto\\Solitaire\\Solitaire\\cartes\\2c.gif")); // NOI18N
-
         javax.swing.GroupLayout jPanel19Layout = new javax.swing.GroupLayout(jPanel19);
         jPanel19.setLayout(jPanel19Layout);
         jPanel19Layout.setHorizontalGroup(
@@ -556,8 +529,6 @@ public class Afficher extends javax.swing.JFrame {
         );
 
         jPanel1.add(jPanel19);
-
-        jLabel18.setIcon(new javax.swing.ImageIcon("C:\\Users\\Issam\\Desktop\\Crypto\\Solitaire\\Solitaire\\cartes\\2c.gif")); // NOI18N
 
         javax.swing.GroupLayout jPanel20Layout = new javax.swing.GroupLayout(jPanel20);
         jPanel20.setLayout(jPanel20Layout);
@@ -578,8 +549,6 @@ public class Afficher extends javax.swing.JFrame {
 
         jPanel1.add(jPanel20);
 
-        jLabel19.setIcon(new javax.swing.ImageIcon("C:\\Users\\Issam\\Desktop\\Crypto\\Solitaire\\Solitaire\\cartes\\2c.gif")); // NOI18N
-
         javax.swing.GroupLayout jPanel21Layout = new javax.swing.GroupLayout(jPanel21);
         jPanel21.setLayout(jPanel21Layout);
         jPanel21Layout.setHorizontalGroup(
@@ -598,8 +567,6 @@ public class Afficher extends javax.swing.JFrame {
         );
 
         jPanel1.add(jPanel21);
-
-        jLabel20.setIcon(new javax.swing.ImageIcon("C:\\Users\\Issam\\Desktop\\Crypto\\Solitaire\\Solitaire\\cartes\\2c.gif")); // NOI18N
 
         javax.swing.GroupLayout jPanel22Layout = new javax.swing.GroupLayout(jPanel22);
         jPanel22.setLayout(jPanel22Layout);
@@ -620,8 +587,6 @@ public class Afficher extends javax.swing.JFrame {
 
         jPanel1.add(jPanel22);
 
-        jLabel21.setIcon(new javax.swing.ImageIcon("C:\\Users\\Issam\\Desktop\\Crypto\\Solitaire\\Solitaire\\cartes\\2c.gif")); // NOI18N
-
         javax.swing.GroupLayout jPanel23Layout = new javax.swing.GroupLayout(jPanel23);
         jPanel23.setLayout(jPanel23Layout);
         jPanel23Layout.setHorizontalGroup(
@@ -640,8 +605,6 @@ public class Afficher extends javax.swing.JFrame {
         );
 
         jPanel1.add(jPanel23);
-
-        jLabel22.setIcon(new javax.swing.ImageIcon("C:\\Users\\Issam\\Desktop\\Crypto\\Solitaire\\Solitaire\\cartes\\2c.gif")); // NOI18N
 
         javax.swing.GroupLayout jPanel24Layout = new javax.swing.GroupLayout(jPanel24);
         jPanel24.setLayout(jPanel24Layout);
@@ -662,8 +625,6 @@ public class Afficher extends javax.swing.JFrame {
 
         jPanel1.add(jPanel24);
 
-        jLabel23.setIcon(new javax.swing.ImageIcon("C:\\Users\\Issam\\Desktop\\Crypto\\Solitaire\\Solitaire\\cartes\\2c.gif")); // NOI18N
-
         javax.swing.GroupLayout jPanel25Layout = new javax.swing.GroupLayout(jPanel25);
         jPanel25.setLayout(jPanel25Layout);
         jPanel25Layout.setHorizontalGroup(
@@ -682,8 +643,6 @@ public class Afficher extends javax.swing.JFrame {
         );
 
         jPanel1.add(jPanel25);
-
-        jLabel24.setIcon(new javax.swing.ImageIcon("C:\\Users\\Issam\\Desktop\\Crypto\\Solitaire\\Solitaire\\cartes\\2c.gif")); // NOI18N
 
         javax.swing.GroupLayout jPanel26Layout = new javax.swing.GroupLayout(jPanel26);
         jPanel26.setLayout(jPanel26Layout);
@@ -704,8 +663,6 @@ public class Afficher extends javax.swing.JFrame {
 
         jPanel1.add(jPanel26);
 
-        jLabel25.setIcon(new javax.swing.ImageIcon("C:\\Users\\Issam\\Desktop\\Crypto\\Solitaire\\Solitaire\\cartes\\2c.gif")); // NOI18N
-
         javax.swing.GroupLayout jPanel27Layout = new javax.swing.GroupLayout(jPanel27);
         jPanel27.setLayout(jPanel27Layout);
         jPanel27Layout.setHorizontalGroup(
@@ -724,8 +681,6 @@ public class Afficher extends javax.swing.JFrame {
         );
 
         jPanel1.add(jPanel27);
-
-        jLabel26.setIcon(new javax.swing.ImageIcon("C:\\Users\\Issam\\Desktop\\Crypto\\Solitaire\\Solitaire\\cartes\\2c.gif")); // NOI18N
 
         javax.swing.GroupLayout jPanel28Layout = new javax.swing.GroupLayout(jPanel28);
         jPanel28.setLayout(jPanel28Layout);
@@ -746,8 +701,6 @@ public class Afficher extends javax.swing.JFrame {
 
         jPanel1.add(jPanel28);
 
-        jLabel27.setIcon(new javax.swing.ImageIcon("C:\\Users\\Issam\\Desktop\\Crypto\\Solitaire\\Solitaire\\cartes\\2c.gif")); // NOI18N
-
         javax.swing.GroupLayout jPanel29Layout = new javax.swing.GroupLayout(jPanel29);
         jPanel29.setLayout(jPanel29Layout);
         jPanel29Layout.setHorizontalGroup(
@@ -766,8 +719,6 @@ public class Afficher extends javax.swing.JFrame {
         );
 
         jPanel1.add(jPanel29);
-
-        jLabel28.setIcon(new javax.swing.ImageIcon("C:\\Users\\Issam\\Desktop\\Crypto\\Solitaire\\Solitaire\\cartes\\2c.gif")); // NOI18N
 
         javax.swing.GroupLayout jPanel30Layout = new javax.swing.GroupLayout(jPanel30);
         jPanel30.setLayout(jPanel30Layout);
@@ -788,8 +739,6 @@ public class Afficher extends javax.swing.JFrame {
 
         jPanel1.add(jPanel30);
 
-        jLabel29.setIcon(new javax.swing.ImageIcon("C:\\Users\\Issam\\Desktop\\Crypto\\Solitaire\\Solitaire\\cartes\\2c.gif")); // NOI18N
-
         javax.swing.GroupLayout jPanel31Layout = new javax.swing.GroupLayout(jPanel31);
         jPanel31.setLayout(jPanel31Layout);
         jPanel31Layout.setHorizontalGroup(
@@ -808,8 +757,6 @@ public class Afficher extends javax.swing.JFrame {
         );
 
         jPanel1.add(jPanel31);
-
-        jLabel30.setIcon(new javax.swing.ImageIcon("C:\\Users\\Issam\\Desktop\\Crypto\\Solitaire\\Solitaire\\cartes\\2c.gif")); // NOI18N
 
         javax.swing.GroupLayout jPanel32Layout = new javax.swing.GroupLayout(jPanel32);
         jPanel32.setLayout(jPanel32Layout);
@@ -830,8 +777,6 @@ public class Afficher extends javax.swing.JFrame {
 
         jPanel1.add(jPanel32);
 
-        jLabel31.setIcon(new javax.swing.ImageIcon("C:\\Users\\Issam\\Desktop\\Crypto\\Solitaire\\Solitaire\\cartes\\2c.gif")); // NOI18N
-
         javax.swing.GroupLayout jPanel33Layout = new javax.swing.GroupLayout(jPanel33);
         jPanel33.setLayout(jPanel33Layout);
         jPanel33Layout.setHorizontalGroup(
@@ -850,8 +795,6 @@ public class Afficher extends javax.swing.JFrame {
         );
 
         jPanel1.add(jPanel33);
-
-        jLabel32.setIcon(new javax.swing.ImageIcon("C:\\Users\\Issam\\Desktop\\Crypto\\Solitaire\\Solitaire\\cartes\\2c.gif")); // NOI18N
 
         javax.swing.GroupLayout jPanel34Layout = new javax.swing.GroupLayout(jPanel34);
         jPanel34.setLayout(jPanel34Layout);
@@ -872,8 +815,6 @@ public class Afficher extends javax.swing.JFrame {
 
         jPanel1.add(jPanel34);
 
-        jLabel33.setIcon(new javax.swing.ImageIcon("C:\\Users\\Issam\\Desktop\\Crypto\\Solitaire\\Solitaire\\cartes\\2c.gif")); // NOI18N
-
         javax.swing.GroupLayout jPanel35Layout = new javax.swing.GroupLayout(jPanel35);
         jPanel35.setLayout(jPanel35Layout);
         jPanel35Layout.setHorizontalGroup(
@@ -892,8 +833,6 @@ public class Afficher extends javax.swing.JFrame {
         );
 
         jPanel1.add(jPanel35);
-
-        jLabel34.setIcon(new javax.swing.ImageIcon("C:\\Users\\Issam\\Desktop\\Crypto\\Solitaire\\Solitaire\\cartes\\2c.gif")); // NOI18N
 
         javax.swing.GroupLayout jPanel36Layout = new javax.swing.GroupLayout(jPanel36);
         jPanel36.setLayout(jPanel36Layout);
@@ -914,8 +853,6 @@ public class Afficher extends javax.swing.JFrame {
 
         jPanel1.add(jPanel36);
 
-        jLabel35.setIcon(new javax.swing.ImageIcon("C:\\Users\\Issam\\Desktop\\Crypto\\Solitaire\\Solitaire\\cartes\\2c.gif")); // NOI18N
-
         javax.swing.GroupLayout jPanel37Layout = new javax.swing.GroupLayout(jPanel37);
         jPanel37.setLayout(jPanel37Layout);
         jPanel37Layout.setHorizontalGroup(
@@ -934,8 +871,6 @@ public class Afficher extends javax.swing.JFrame {
         );
 
         jPanel1.add(jPanel37);
-
-        jLabel36.setIcon(new javax.swing.ImageIcon("C:\\Users\\Issam\\Desktop\\Crypto\\Solitaire\\Solitaire\\cartes\\2c.gif")); // NOI18N
 
         javax.swing.GroupLayout jPanel38Layout = new javax.swing.GroupLayout(jPanel38);
         jPanel38.setLayout(jPanel38Layout);
@@ -956,8 +891,6 @@ public class Afficher extends javax.swing.JFrame {
 
         jPanel1.add(jPanel38);
 
-        jLabel37.setIcon(new javax.swing.ImageIcon("C:\\Users\\Issam\\Desktop\\Crypto\\Solitaire\\Solitaire\\cartes\\2c.gif")); // NOI18N
-
         javax.swing.GroupLayout jPanel39Layout = new javax.swing.GroupLayout(jPanel39);
         jPanel39.setLayout(jPanel39Layout);
         jPanel39Layout.setHorizontalGroup(
@@ -976,8 +909,6 @@ public class Afficher extends javax.swing.JFrame {
         );
 
         jPanel1.add(jPanel39);
-
-        jLabel38.setIcon(new javax.swing.ImageIcon("C:\\Users\\Issam\\Desktop\\Crypto\\Solitaire\\Solitaire\\cartes\\2c.gif")); // NOI18N
 
         javax.swing.GroupLayout jPanel40Layout = new javax.swing.GroupLayout(jPanel40);
         jPanel40.setLayout(jPanel40Layout);
@@ -998,8 +929,6 @@ public class Afficher extends javax.swing.JFrame {
 
         jPanel1.add(jPanel40);
 
-        jLabel39.setIcon(new javax.swing.ImageIcon("C:\\Users\\Issam\\Desktop\\Crypto\\Solitaire\\Solitaire\\cartes\\2c.gif")); // NOI18N
-
         javax.swing.GroupLayout jPanel41Layout = new javax.swing.GroupLayout(jPanel41);
         jPanel41.setLayout(jPanel41Layout);
         jPanel41Layout.setHorizontalGroup(
@@ -1018,8 +947,6 @@ public class Afficher extends javax.swing.JFrame {
         );
 
         jPanel1.add(jPanel41);
-
-        jLabel40.setIcon(new javax.swing.ImageIcon("C:\\Users\\Issam\\Desktop\\Crypto\\Solitaire\\Solitaire\\cartes\\2c.gif")); // NOI18N
 
         javax.swing.GroupLayout jPanel42Layout = new javax.swing.GroupLayout(jPanel42);
         jPanel42.setLayout(jPanel42Layout);
@@ -1040,8 +967,6 @@ public class Afficher extends javax.swing.JFrame {
 
         jPanel1.add(jPanel42);
 
-        jLabel41.setIcon(new javax.swing.ImageIcon("C:\\Users\\Issam\\Desktop\\Crypto\\Solitaire\\Solitaire\\cartes\\2c.gif")); // NOI18N
-
         javax.swing.GroupLayout jPanel43Layout = new javax.swing.GroupLayout(jPanel43);
         jPanel43.setLayout(jPanel43Layout);
         jPanel43Layout.setHorizontalGroup(
@@ -1060,8 +985,6 @@ public class Afficher extends javax.swing.JFrame {
         );
 
         jPanel1.add(jPanel43);
-
-        jLabel42.setIcon(new javax.swing.ImageIcon("C:\\Users\\Issam\\Desktop\\Crypto\\Solitaire\\Solitaire\\cartes\\2c.gif")); // NOI18N
 
         javax.swing.GroupLayout jPanel44Layout = new javax.swing.GroupLayout(jPanel44);
         jPanel44.setLayout(jPanel44Layout);
@@ -1082,8 +1005,6 @@ public class Afficher extends javax.swing.JFrame {
 
         jPanel1.add(jPanel44);
 
-        jLabel43.setIcon(new javax.swing.ImageIcon("C:\\Users\\Issam\\Desktop\\Crypto\\Solitaire\\Solitaire\\cartes\\2c.gif")); // NOI18N
-
         javax.swing.GroupLayout jPanel45Layout = new javax.swing.GroupLayout(jPanel45);
         jPanel45.setLayout(jPanel45Layout);
         jPanel45Layout.setHorizontalGroup(
@@ -1102,8 +1023,6 @@ public class Afficher extends javax.swing.JFrame {
         );
 
         jPanel1.add(jPanel45);
-
-        jLabel44.setIcon(new javax.swing.ImageIcon("C:\\Users\\Issam\\Desktop\\Crypto\\Solitaire\\Solitaire\\cartes\\2c.gif")); // NOI18N
 
         javax.swing.GroupLayout jPanel46Layout = new javax.swing.GroupLayout(jPanel46);
         jPanel46.setLayout(jPanel46Layout);
@@ -1124,8 +1043,6 @@ public class Afficher extends javax.swing.JFrame {
 
         jPanel1.add(jPanel46);
 
-        jLabel45.setIcon(new javax.swing.ImageIcon("C:\\Users\\Issam\\Desktop\\Crypto\\Solitaire\\Solitaire\\cartes\\2c.gif")); // NOI18N
-
         javax.swing.GroupLayout jPanel47Layout = new javax.swing.GroupLayout(jPanel47);
         jPanel47.setLayout(jPanel47Layout);
         jPanel47Layout.setHorizontalGroup(
@@ -1144,8 +1061,6 @@ public class Afficher extends javax.swing.JFrame {
         );
 
         jPanel1.add(jPanel47);
-
-        jLabel46.setIcon(new javax.swing.ImageIcon("C:\\Users\\Issam\\Desktop\\Crypto\\Solitaire\\Solitaire\\cartes\\2c.gif")); // NOI18N
 
         javax.swing.GroupLayout jPanel48Layout = new javax.swing.GroupLayout(jPanel48);
         jPanel48.setLayout(jPanel48Layout);
@@ -1166,8 +1081,6 @@ public class Afficher extends javax.swing.JFrame {
 
         jPanel1.add(jPanel48);
 
-        jLabel47.setIcon(new javax.swing.ImageIcon("C:\\Users\\Issam\\Desktop\\Crypto\\Solitaire\\Solitaire\\cartes\\2c.gif")); // NOI18N
-
         javax.swing.GroupLayout jPanel49Layout = new javax.swing.GroupLayout(jPanel49);
         jPanel49.setLayout(jPanel49Layout);
         jPanel49Layout.setHorizontalGroup(
@@ -1186,8 +1099,6 @@ public class Afficher extends javax.swing.JFrame {
         );
 
         jPanel1.add(jPanel49);
-
-        jLabel48.setIcon(new javax.swing.ImageIcon("C:\\Users\\Issam\\Desktop\\Crypto\\Solitaire\\Solitaire\\cartes\\2c.gif")); // NOI18N
 
         javax.swing.GroupLayout jPanel50Layout = new javax.swing.GroupLayout(jPanel50);
         jPanel50.setLayout(jPanel50Layout);
@@ -1208,8 +1119,6 @@ public class Afficher extends javax.swing.JFrame {
 
         jPanel1.add(jPanel50);
 
-        jLabel49.setIcon(new javax.swing.ImageIcon("C:\\Users\\Issam\\Desktop\\Crypto\\Solitaire\\Solitaire\\cartes\\2c.gif")); // NOI18N
-
         javax.swing.GroupLayout jPanel51Layout = new javax.swing.GroupLayout(jPanel51);
         jPanel51.setLayout(jPanel51Layout);
         jPanel51Layout.setHorizontalGroup(
@@ -1228,8 +1137,6 @@ public class Afficher extends javax.swing.JFrame {
         );
 
         jPanel1.add(jPanel51);
-
-        jLabel50.setIcon(new javax.swing.ImageIcon("C:\\Users\\Issam\\Desktop\\Crypto\\Solitaire\\Solitaire\\cartes\\2c.gif")); // NOI18N
 
         javax.swing.GroupLayout jPanel52Layout = new javax.swing.GroupLayout(jPanel52);
         jPanel52.setLayout(jPanel52Layout);
@@ -1250,8 +1157,6 @@ public class Afficher extends javax.swing.JFrame {
 
         jPanel1.add(jPanel52);
 
-        jLabel51.setIcon(new javax.swing.ImageIcon("C:\\Users\\Issam\\Desktop\\Crypto\\Solitaire\\Solitaire\\cartes\\2c.gif")); // NOI18N
-
         javax.swing.GroupLayout jPanel53Layout = new javax.swing.GroupLayout(jPanel53);
         jPanel53.setLayout(jPanel53Layout);
         jPanel53Layout.setHorizontalGroup(
@@ -1270,8 +1175,6 @@ public class Afficher extends javax.swing.JFrame {
         );
 
         jPanel1.add(jPanel53);
-
-        jLabel52.setIcon(new javax.swing.ImageIcon("C:\\Users\\Issam\\Desktop\\Crypto\\Solitaire\\Solitaire\\cartes\\2c.gif")); // NOI18N
 
         javax.swing.GroupLayout jPanel54Layout = new javax.swing.GroupLayout(jPanel54);
         jPanel54.setLayout(jPanel54Layout);
@@ -1292,8 +1195,6 @@ public class Afficher extends javax.swing.JFrame {
 
         jPanel1.add(jPanel54);
 
-        jLabel53.setIcon(new javax.swing.ImageIcon("C:\\Users\\Issam\\Desktop\\Crypto\\Solitaire\\Solitaire\\cartes\\2c.gif")); // NOI18N
-
         javax.swing.GroupLayout jPanel55Layout = new javax.swing.GroupLayout(jPanel55);
         jPanel55.setLayout(jPanel55Layout);
         jPanel55Layout.setHorizontalGroup(
@@ -1312,8 +1213,6 @@ public class Afficher extends javax.swing.JFrame {
         );
 
         jPanel1.add(jPanel55);
-
-        jLabel54.setIcon(new javax.swing.ImageIcon("C:\\Users\\Issam\\Desktop\\Crypto\\Solitaire\\Solitaire\\cartes\\2c.gif")); // NOI18N
 
         javax.swing.GroupLayout jPanel56Layout = new javax.swing.GroupLayout(jPanel56);
         jPanel56.setLayout(jPanel56Layout);
@@ -1334,6 +1233,9 @@ public class Afficher extends javax.swing.JFrame {
 
         jPanel1.add(jPanel56);
 
+        getContentPane().add(jPanel1);
+
+        jPanel2.setBackground(new java.awt.Color(204, 255, 51));
         jPanel2.setLayout(new java.awt.GridLayout(1, 0));
 
         jTextField1.setEditable(false);
@@ -1345,26 +1247,7 @@ public class Afficher extends javax.swing.JFrame {
         });
         jPanel2.add(jTextField1);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(0, 0, 0)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
+        getContentPane().add(jPanel2);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
