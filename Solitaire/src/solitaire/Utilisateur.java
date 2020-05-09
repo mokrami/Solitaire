@@ -73,7 +73,7 @@ public class Utilisateur {
         this.paquet = p;
     }
    
-    public String formatte(String s) 
+    private String formatte(String s) 
     {
         HashMap<Character,String> dico = new HashMap<>();
         //source : http://java.mesexemples.com/java-basic/formatage-de-sortie/java-remplacer-les-accents-dun-chaine-de-caractere/
