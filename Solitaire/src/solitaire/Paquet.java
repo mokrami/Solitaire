@@ -127,6 +127,10 @@ public class Paquet {
         return res.toUpperCase();
     }
     
+    public char genererUneLettreAleatoire(){
+        return this.creerMasqueJetable(1).charAt(0);
+    }
+    
     /**
      * Mélange le paquet de carte selon la méthode du solitaire
      */

@@ -5,6 +5,7 @@
  */
 package solitaire;
 
+import java.math.BigInteger;
 import java.text.Normalizer;
 import java.util.HashMap;
 import java.util.regex.Pattern;
@@ -43,6 +44,44 @@ public class Utilisateur {
         return res;
     }
     
+    public byte[] crypter(byte[] message){
+        byte[] message_resultat = new byte[message.length];
+        int masque;
+        int a, b;    
+        
+        for(int i=0; i<message.length; i++){
+            int octet = message[i] & 0xFF;
+            a = (this.getPaquet().genererUneLettreAleatoire()-65)%16;
+            b = (this.getPaquet().genererUneLettreAleatoire()-65)%16;
+            masque = 16*a+b;
+            message_resultat[i] = (byte) ((octet + masque)%255);
+        }
+        
+        return message_resultat;
+    }
+    
+    public Message crypterAvecBytes(String msg){
+        byte[] message = msg.getBytes();
+        int masque;
+        int a, b;    
+        String version_binaire = "";
+        String masque_jetable = "";
+        
+        for(int i=0; i<message.length; i++){
+            int octet = message[i] & 0xFF;
+            a = (this.getPaquet().genererUneLettreAleatoire()-65)%16;
+            b = (this.getPaquet().genererUneLettreAleatoire()-65)%16;
+            masque = 16*a+b;
+            masque_jetable += String.format("%8s", Integer.toBinaryString(masque & 0xFF)).replace(' ', '0');
+            version_binaire += String.format("%8s", Integer.toBinaryString((byte) ((octet + masque)%255) & 0xFF)).replace(' ', '0');
+        }
+        
+        Message res = new Message(msg);
+        res.setMasqueJetable(masque_jetable);
+        res.setMessageArrivee(version_binaire);
+        return res;
+    }
+    
     /**
      * Décrypte le message reçu par l'utilisateur
      * @param message message a decrypter
@@ -62,6 +101,45 @@ public class Utilisateur {
         }
         res.setMessageArrivee(message_resultat);
         
+        return res;
+    }
+    
+    public byte[] decrypter(byte[] message){
+        byte[] message_resultat = new byte[message.length];
+        int masque;
+        int a, b;       
+        
+        for(int i=0; i<message.length; i++){
+            int octet = message[i] & 0xFF;
+            a = (this.getPaquet().genererUneLettreAleatoire()-65)%16;
+            b = (this.getPaquet().genererUneLettreAleatoire()-65)%16;
+            masque = 16*a+b;
+            message_resultat[i] = (byte) (Math.floorMod(octet-masque, 255));
+        }
+        
+        return message_resultat;
+    }
+    
+    public Message decrypterAvecBytes(String suiteBinaire){
+        byte[] message = new byte[suiteBinaire.length()/8];
+        for(int i=0; i<message.length; i++) message[i] = (byte)(int)Integer.valueOf(suiteBinaire.substring(i*8, i*8+8), 2);
+        byte[] message_resultat = new byte[message.length];
+        int masque;
+        int a, b;    
+        String masque_jetable = "";
+        
+        for(int i=0; i<message.length; i++){
+            int octet = message[i] & 0xFF;
+            a = (this.getPaquet().genererUneLettreAleatoire()-65)%16;
+            b = (this.getPaquet().genererUneLettreAleatoire()-65)%16;
+            masque = 16*a+b;
+            masque_jetable += String.format("%8s", Integer.toBinaryString(masque & 0xFF)).replace(' ', '0');
+            message_resultat[i] = (byte) (Math.floorMod(octet-masque, 255));
+        }
+        
+        Message res = new Message(suiteBinaire);
+        res.setMasqueJetable(masque_jetable);
+        res.setMessageArrivee(new String(message_resultat));
         return res;
     }
     
