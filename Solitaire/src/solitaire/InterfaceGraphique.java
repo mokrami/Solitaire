@@ -45,11 +45,15 @@ public class InterfaceGraphique extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         filler3 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 10), new java.awt.Dimension(0, 10), new java.awt.Dimension(32767, 10));
         jPanel2 = new javax.swing.JPanel();
+        filler8 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 0));
         jLabel2 = new javax.swing.JLabel();
         filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
         jButton_AfficherPaquet = new javax.swing.JButton();
         filler2 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
         jButton_ModifierPaquet = new javax.swing.JButton();
+        filler6 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
+        jComboBox1 = new javax.swing.JComboBox<>();
+        filler7 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 0));
         jPanel5 = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
@@ -109,6 +113,7 @@ public class InterfaceGraphique extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(51, 51, 51));
         jPanel2.setLayout(new javax.swing.BoxLayout(jPanel2, javax.swing.BoxLayout.LINE_AXIS));
+        jPanel2.add(filler8);
 
         jLabel2.setFont(new java.awt.Font("Agency FB", 1, 16)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(204, 204, 204));
@@ -138,6 +143,13 @@ public class InterfaceGraphique extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jButton_ModifierPaquet);
+        jPanel2.add(filler6);
+
+        jComboBox1.setBackground(new java.awt.Color(204, 204, 204));
+        jComboBox1.setFont(new java.awt.Font("Agency FB", 0, 16)); // NOI18N
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "METHODE CLASSIQUE", "METHODE OCTETS" }));
+        jPanel2.add(jComboBox1);
+        jPanel2.add(filler7);
 
         jPanel4.add(jPanel2);
 
@@ -285,7 +297,7 @@ public class InterfaceGraphique extends javax.swing.JFrame {
             Timer timer = new Timer(dureePause, new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    if(compteur < masque.length()) {
+                    if(compteur < res.length()) {
                         afficheurMasque.setText(afficheurMasque.getText() + masque.charAt(compteur));
                         afficheurRes.setText(afficheurRes.getText() + res.charAt(compteur));
                         compteur++;
@@ -302,14 +314,22 @@ public class InterfaceGraphique extends javax.swing.JFrame {
     
     private void jButton_CrypterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton_CrypterMouseClicked
         String messageACrypter = this.jTextArea_MessageACrypter.getText();
-        Message messageCrypte = this.user.crypter(messageACrypter);
+        Message messageCrypte;
+        if(this.jComboBox1.getSelectedIndex()==0)
+            messageCrypte = this.user.crypter(messageACrypter);
+        else
+            messageCrypte = this.user.crypterAvecBytes(messageACrypter);
         //this.jTextArea_MasqueJetableCrypter.setText(messageCrypte.getMasqueJetable());
         this.animationAffichage(this.jTextArea_MasqueJetableCrypter, messageCrypte.getMasqueJetable(), this.jTextArea_MessageCrypte, messageCrypte.getMessageArrivee(), 5);
     }//GEN-LAST:event_jButton_CrypterMouseClicked
 
     private void jButton_DecrypterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton_DecrypterMouseClicked
         String messageADecrypter = this.jTextArea_MessageADecrypter.getText();
-        Message messageDecrypte = this.user.decrypter(messageADecrypter);
+        Message messageDecrypte;
+        if(this.jComboBox1.getSelectedIndex()==0)
+            messageDecrypte = this.user.decrypter(messageADecrypter);
+        else
+            messageDecrypte = this.user.decrypterAvecBytes(messageADecrypter);
         this.animationAffichage(this.jTextArea_MasqueJetableDecrypter, messageDecrypte.getMasqueJetable(), this.jTextArea_MessageDecrypte, messageDecrypte.getMessageArrivee(), 5);
     }//GEN-LAST:event_jButton_DecrypterMouseClicked
 
@@ -329,10 +349,14 @@ public class InterfaceGraphique extends javax.swing.JFrame {
     private javax.swing.Box.Filler filler3;
     private javax.swing.Box.Filler filler4;
     private javax.swing.Box.Filler filler5;
+    private javax.swing.Box.Filler filler6;
+    private javax.swing.Box.Filler filler7;
+    private javax.swing.Box.Filler filler8;
     private javax.swing.JButton jButton_AfficherPaquet;
     private javax.swing.JButton jButton_Crypter;
     private javax.swing.JButton jButton_Decrypter;
     private javax.swing.JButton jButton_ModifierPaquet;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
