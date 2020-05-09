@@ -5,8 +5,6 @@
  */
 package solitaire;
 
-import javax.swing.ImageIcon;
-
 /**
  *
  * @author im678382
@@ -21,7 +19,7 @@ public class Solitaire {
         appU1.setVisible(true);
         
         InterfaceGraphique appU2 = new InterfaceGraphique();
-        appU2.setVisible(true);             
+        appU2.setVisible(true);
     }
     
 }
