@@ -57,14 +57,14 @@ public class InterfaceModifierPaquet extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Modifier paquet initial");
         setBackground(new java.awt.Color(102, 102, 102));
-        getContentPane().setLayout(new java.awt.GridLayout());
+        getContentPane().setLayout(new java.awt.GridLayout(1, 0));
 
         jSplitPane1.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
 
         jPanel2.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel2.setLayout(new java.awt.GridLayout());
+        jPanel2.setLayout(new java.awt.GridLayout(1, 0));
 
-        jLabel1.setFont(new java.awt.Font("Bebas", 1, 36)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Agency FB", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(204, 204, 204));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Modifier le paquet initial");
@@ -75,9 +75,9 @@ public class InterfaceModifierPaquet extends javax.swing.JFrame {
         jPanel6.setLayout(new java.awt.GridLayout(3, 0));
 
         jPanel3.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel3.setLayout(new java.awt.GridLayout());
+        jPanel3.setLayout(new java.awt.GridLayout(1, 0));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Agency FB", 1, 16)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(204, 204, 204));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Entrez le nouveau paquet au format chaîne de caractères :");
@@ -85,7 +85,7 @@ public class InterfaceModifierPaquet extends javax.swing.JFrame {
 
         jPanel6.add(jPanel3);
 
-        jPanel4.setLayout(new java.awt.GridLayout());
+        jPanel4.setLayout(new java.awt.GridLayout(1, 0));
 
         jTextField_PaquetS.setBackground(new java.awt.Color(153, 153, 153));
         jTextField_PaquetS.setFont(new java.awt.Font("Monospaced", 0, 13)); // NOI18N
@@ -96,9 +96,10 @@ public class InterfaceModifierPaquet extends javax.swing.JFrame {
 
         jPanel6.add(jPanel4);
 
-        jPanel5.setLayout(new java.awt.GridLayout());
+        jPanel5.setLayout(new java.awt.GridLayout(1, 0));
 
-        jButton1.setFont(new java.awt.Font("Bebas", 0, 16)); // NOI18N
+        jButton1.setBackground(new java.awt.Color(204, 204, 204));
+        jButton1.setFont(new java.awt.Font("Agency FB", 0, 16)); // NOI18N
         jButton1.setText("MODIFIER");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -106,7 +107,6 @@ public class InterfaceModifierPaquet extends javax.swing.JFrame {
             }
         });
         jPanel5.add(jButton1);
-        jButton1.getAccessibleContext().setAccessibleName("MODIFIER");
 
         jPanel6.add(jPanel5);
 

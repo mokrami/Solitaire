@@ -195,23 +195,25 @@ public class InterfaceAfficherPaquet extends javax.swing.JFrame {
         jLabel53 = new javax.swing.JLabel();
         jPanel56 = new javax.swing.JPanel();
         jLabel54 = new javax.swing.JLabel();
+        jPanel58 = new javax.swing.JPanel();
+        jLabel56 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jTextField1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Afficher le paquet initial");
+        setTitle("Afficher le paquet de cartes");
         setBackground(new java.awt.Color(51, 51, 51));
         setPreferredSize(new java.awt.Dimension(1200, 900));
         getContentPane().setLayout(new javax.swing.BoxLayout(getContentPane(), javax.swing.BoxLayout.PAGE_AXIS));
 
         jPanel57.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel57.setLayout(new java.awt.GridLayout());
+        jPanel57.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel55.setBackground(new java.awt.Color(51, 51, 51));
         jLabel55.setFont(new java.awt.Font("Agency FB", 1, 36)); // NOI18N
         jLabel55.setForeground(new java.awt.Color(204, 204, 204));
         jLabel55.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel55.setText("MON PAQUET INITIAL");
+        jLabel55.setText("MON PAQUET DE CARTES");
         jPanel57.add(jLabel55);
 
         getContentPane().add(jPanel57);
@@ -220,7 +222,7 @@ public class InterfaceAfficherPaquet extends javax.swing.JFrame {
         jPanel1.setLayout(new java.awt.GridLayout(6, 9));
 
         jPanel3.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel3.setLayout(new java.awt.GridLayout());
+        jPanel3.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel1.setBackground(new java.awt.Color(51, 51, 51));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -232,7 +234,7 @@ public class InterfaceAfficherPaquet extends javax.swing.JFrame {
         jPanel1.add(jPanel3);
 
         jPanel4.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel4.setLayout(new java.awt.GridLayout());
+        jPanel4.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel2.setBackground(new java.awt.Color(51, 51, 51));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -242,7 +244,7 @@ public class InterfaceAfficherPaquet extends javax.swing.JFrame {
         jPanel1.add(jPanel4);
 
         jPanel5.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel5.setLayout(new java.awt.GridLayout());
+        jPanel5.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel3.setBackground(new java.awt.Color(51, 51, 51));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -252,7 +254,7 @@ public class InterfaceAfficherPaquet extends javax.swing.JFrame {
         jPanel1.add(jPanel5);
 
         jPanel6.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel6.setLayout(new java.awt.GridLayout());
+        jPanel6.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel4.setBackground(new java.awt.Color(51, 51, 51));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -262,7 +264,7 @@ public class InterfaceAfficherPaquet extends javax.swing.JFrame {
         jPanel1.add(jPanel6);
 
         jPanel7.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel7.setLayout(new java.awt.GridLayout());
+        jPanel7.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel5.setBackground(new java.awt.Color(51, 51, 51));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -272,7 +274,7 @@ public class InterfaceAfficherPaquet extends javax.swing.JFrame {
         jPanel1.add(jPanel7);
 
         jPanel8.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel8.setLayout(new java.awt.GridLayout());
+        jPanel8.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel6.setBackground(new java.awt.Color(51, 51, 51));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -282,7 +284,7 @@ public class InterfaceAfficherPaquet extends javax.swing.JFrame {
         jPanel1.add(jPanel8);
 
         jPanel9.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel9.setLayout(new java.awt.GridLayout());
+        jPanel9.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel7.setBackground(new java.awt.Color(51, 51, 51));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -292,7 +294,7 @@ public class InterfaceAfficherPaquet extends javax.swing.JFrame {
         jPanel1.add(jPanel9);
 
         jPanel10.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel10.setLayout(new java.awt.GridLayout());
+        jPanel10.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel8.setBackground(new java.awt.Color(51, 51, 51));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -302,7 +304,7 @@ public class InterfaceAfficherPaquet extends javax.swing.JFrame {
         jPanel1.add(jPanel10);
 
         jPanel11.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel11.setLayout(new java.awt.GridLayout());
+        jPanel11.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel9.setBackground(new java.awt.Color(51, 51, 51));
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -312,7 +314,7 @@ public class InterfaceAfficherPaquet extends javax.swing.JFrame {
         jPanel1.add(jPanel11);
 
         jPanel12.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel12.setLayout(new java.awt.GridLayout());
+        jPanel12.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel10.setBackground(new java.awt.Color(51, 51, 51));
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -322,7 +324,7 @@ public class InterfaceAfficherPaquet extends javax.swing.JFrame {
         jPanel1.add(jPanel12);
 
         jPanel13.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel13.setLayout(new java.awt.GridLayout());
+        jPanel13.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel11.setBackground(new java.awt.Color(51, 51, 51));
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -332,7 +334,7 @@ public class InterfaceAfficherPaquet extends javax.swing.JFrame {
         jPanel1.add(jPanel13);
 
         jPanel14.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel14.setLayout(new java.awt.GridLayout());
+        jPanel14.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel12.setBackground(new java.awt.Color(51, 51, 51));
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -342,7 +344,7 @@ public class InterfaceAfficherPaquet extends javax.swing.JFrame {
         jPanel1.add(jPanel14);
 
         jPanel15.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel15.setLayout(new java.awt.GridLayout());
+        jPanel15.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel13.setBackground(new java.awt.Color(51, 51, 51));
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -352,7 +354,7 @@ public class InterfaceAfficherPaquet extends javax.swing.JFrame {
         jPanel1.add(jPanel15);
 
         jPanel16.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel16.setLayout(new java.awt.GridLayout());
+        jPanel16.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel14.setBackground(new java.awt.Color(51, 51, 51));
         jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -362,7 +364,7 @@ public class InterfaceAfficherPaquet extends javax.swing.JFrame {
         jPanel1.add(jPanel16);
 
         jPanel17.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel17.setLayout(new java.awt.GridLayout());
+        jPanel17.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel15.setBackground(new java.awt.Color(51, 51, 51));
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -372,7 +374,7 @@ public class InterfaceAfficherPaquet extends javax.swing.JFrame {
         jPanel1.add(jPanel17);
 
         jPanel18.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel18.setLayout(new java.awt.GridLayout());
+        jPanel18.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel16.setBackground(new java.awt.Color(51, 51, 51));
         jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -382,7 +384,7 @@ public class InterfaceAfficherPaquet extends javax.swing.JFrame {
         jPanel1.add(jPanel18);
 
         jPanel19.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel19.setLayout(new java.awt.GridLayout());
+        jPanel19.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel17.setBackground(new java.awt.Color(51, 51, 51));
         jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -392,7 +394,7 @@ public class InterfaceAfficherPaquet extends javax.swing.JFrame {
         jPanel1.add(jPanel19);
 
         jPanel20.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel20.setLayout(new java.awt.GridLayout());
+        jPanel20.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel18.setBackground(new java.awt.Color(51, 51, 51));
         jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -402,7 +404,7 @@ public class InterfaceAfficherPaquet extends javax.swing.JFrame {
         jPanel1.add(jPanel20);
 
         jPanel21.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel21.setLayout(new java.awt.GridLayout());
+        jPanel21.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel19.setBackground(new java.awt.Color(51, 51, 51));
         jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -412,7 +414,7 @@ public class InterfaceAfficherPaquet extends javax.swing.JFrame {
         jPanel1.add(jPanel21);
 
         jPanel22.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel22.setLayout(new java.awt.GridLayout());
+        jPanel22.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel20.setBackground(new java.awt.Color(51, 51, 51));
         jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -422,7 +424,7 @@ public class InterfaceAfficherPaquet extends javax.swing.JFrame {
         jPanel1.add(jPanel22);
 
         jPanel23.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel23.setLayout(new java.awt.GridLayout());
+        jPanel23.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel21.setBackground(new java.awt.Color(51, 51, 51));
         jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -432,7 +434,7 @@ public class InterfaceAfficherPaquet extends javax.swing.JFrame {
         jPanel1.add(jPanel23);
 
         jPanel24.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel24.setLayout(new java.awt.GridLayout());
+        jPanel24.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel22.setBackground(new java.awt.Color(51, 51, 51));
         jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -442,7 +444,7 @@ public class InterfaceAfficherPaquet extends javax.swing.JFrame {
         jPanel1.add(jPanel24);
 
         jPanel25.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel25.setLayout(new java.awt.GridLayout());
+        jPanel25.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel23.setBackground(new java.awt.Color(51, 51, 51));
         jLabel23.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -452,7 +454,7 @@ public class InterfaceAfficherPaquet extends javax.swing.JFrame {
         jPanel1.add(jPanel25);
 
         jPanel26.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel26.setLayout(new java.awt.GridLayout());
+        jPanel26.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel24.setBackground(new java.awt.Color(51, 51, 51));
         jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -462,7 +464,7 @@ public class InterfaceAfficherPaquet extends javax.swing.JFrame {
         jPanel1.add(jPanel26);
 
         jPanel27.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel27.setLayout(new java.awt.GridLayout());
+        jPanel27.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel25.setBackground(new java.awt.Color(51, 51, 51));
         jLabel25.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -472,7 +474,7 @@ public class InterfaceAfficherPaquet extends javax.swing.JFrame {
         jPanel1.add(jPanel27);
 
         jPanel28.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel28.setLayout(new java.awt.GridLayout());
+        jPanel28.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel26.setBackground(new java.awt.Color(51, 51, 51));
         jLabel26.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -482,7 +484,7 @@ public class InterfaceAfficherPaquet extends javax.swing.JFrame {
         jPanel1.add(jPanel28);
 
         jPanel29.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel29.setLayout(new java.awt.GridLayout());
+        jPanel29.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel27.setBackground(new java.awt.Color(51, 51, 51));
         jLabel27.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -492,7 +494,7 @@ public class InterfaceAfficherPaquet extends javax.swing.JFrame {
         jPanel1.add(jPanel29);
 
         jPanel30.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel30.setLayout(new java.awt.GridLayout());
+        jPanel30.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel28.setBackground(new java.awt.Color(51, 51, 51));
         jLabel28.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -502,7 +504,7 @@ public class InterfaceAfficherPaquet extends javax.swing.JFrame {
         jPanel1.add(jPanel30);
 
         jPanel31.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel31.setLayout(new java.awt.GridLayout());
+        jPanel31.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel29.setBackground(new java.awt.Color(51, 51, 51));
         jLabel29.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -512,7 +514,7 @@ public class InterfaceAfficherPaquet extends javax.swing.JFrame {
         jPanel1.add(jPanel31);
 
         jPanel32.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel32.setLayout(new java.awt.GridLayout());
+        jPanel32.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel30.setBackground(new java.awt.Color(51, 51, 51));
         jLabel30.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -522,7 +524,7 @@ public class InterfaceAfficherPaquet extends javax.swing.JFrame {
         jPanel1.add(jPanel32);
 
         jPanel33.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel33.setLayout(new java.awt.GridLayout());
+        jPanel33.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel31.setBackground(new java.awt.Color(51, 51, 51));
         jLabel31.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -532,7 +534,7 @@ public class InterfaceAfficherPaquet extends javax.swing.JFrame {
         jPanel1.add(jPanel33);
 
         jPanel34.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel34.setLayout(new java.awt.GridLayout());
+        jPanel34.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel32.setBackground(new java.awt.Color(51, 51, 51));
         jLabel32.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -542,7 +544,7 @@ public class InterfaceAfficherPaquet extends javax.swing.JFrame {
         jPanel1.add(jPanel34);
 
         jPanel35.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel35.setLayout(new java.awt.GridLayout());
+        jPanel35.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel33.setBackground(new java.awt.Color(51, 51, 51));
         jLabel33.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -552,7 +554,7 @@ public class InterfaceAfficherPaquet extends javax.swing.JFrame {
         jPanel1.add(jPanel35);
 
         jPanel36.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel36.setLayout(new java.awt.GridLayout());
+        jPanel36.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel34.setBackground(new java.awt.Color(51, 51, 51));
         jLabel34.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -562,7 +564,7 @@ public class InterfaceAfficherPaquet extends javax.swing.JFrame {
         jPanel1.add(jPanel36);
 
         jPanel37.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel37.setLayout(new java.awt.GridLayout());
+        jPanel37.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel35.setBackground(new java.awt.Color(51, 51, 51));
         jLabel35.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -572,7 +574,7 @@ public class InterfaceAfficherPaquet extends javax.swing.JFrame {
         jPanel1.add(jPanel37);
 
         jPanel38.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel38.setLayout(new java.awt.GridLayout());
+        jPanel38.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel36.setBackground(new java.awt.Color(51, 51, 51));
         jLabel36.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -582,7 +584,7 @@ public class InterfaceAfficherPaquet extends javax.swing.JFrame {
         jPanel1.add(jPanel38);
 
         jPanel39.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel39.setLayout(new java.awt.GridLayout());
+        jPanel39.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel37.setBackground(new java.awt.Color(51, 51, 51));
         jLabel37.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -592,7 +594,7 @@ public class InterfaceAfficherPaquet extends javax.swing.JFrame {
         jPanel1.add(jPanel39);
 
         jPanel40.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel40.setLayout(new java.awt.GridLayout());
+        jPanel40.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel38.setBackground(new java.awt.Color(51, 51, 51));
         jLabel38.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -602,7 +604,7 @@ public class InterfaceAfficherPaquet extends javax.swing.JFrame {
         jPanel1.add(jPanel40);
 
         jPanel41.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel41.setLayout(new java.awt.GridLayout());
+        jPanel41.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel39.setBackground(new java.awt.Color(51, 51, 51));
         jLabel39.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -612,7 +614,7 @@ public class InterfaceAfficherPaquet extends javax.swing.JFrame {
         jPanel1.add(jPanel41);
 
         jPanel42.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel42.setLayout(new java.awt.GridLayout());
+        jPanel42.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel40.setBackground(new java.awt.Color(51, 51, 51));
         jLabel40.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -622,7 +624,7 @@ public class InterfaceAfficherPaquet extends javax.swing.JFrame {
         jPanel1.add(jPanel42);
 
         jPanel43.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel43.setLayout(new java.awt.GridLayout());
+        jPanel43.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel41.setBackground(new java.awt.Color(51, 51, 51));
         jLabel41.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -632,7 +634,7 @@ public class InterfaceAfficherPaquet extends javax.swing.JFrame {
         jPanel1.add(jPanel43);
 
         jPanel44.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel44.setLayout(new java.awt.GridLayout());
+        jPanel44.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel42.setBackground(new java.awt.Color(51, 51, 51));
         jLabel42.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -642,7 +644,7 @@ public class InterfaceAfficherPaquet extends javax.swing.JFrame {
         jPanel1.add(jPanel44);
 
         jPanel45.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel45.setLayout(new java.awt.GridLayout());
+        jPanel45.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel43.setBackground(new java.awt.Color(51, 51, 51));
         jLabel43.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -652,7 +654,7 @@ public class InterfaceAfficherPaquet extends javax.swing.JFrame {
         jPanel1.add(jPanel45);
 
         jPanel46.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel46.setLayout(new java.awt.GridLayout());
+        jPanel46.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel44.setBackground(new java.awt.Color(51, 51, 51));
         jLabel44.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -662,7 +664,7 @@ public class InterfaceAfficherPaquet extends javax.swing.JFrame {
         jPanel1.add(jPanel46);
 
         jPanel47.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel47.setLayout(new java.awt.GridLayout());
+        jPanel47.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel45.setBackground(new java.awt.Color(51, 51, 51));
         jLabel45.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -672,7 +674,7 @@ public class InterfaceAfficherPaquet extends javax.swing.JFrame {
         jPanel1.add(jPanel47);
 
         jPanel48.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel48.setLayout(new java.awt.GridLayout());
+        jPanel48.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel46.setBackground(new java.awt.Color(51, 51, 51));
         jLabel46.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -682,7 +684,7 @@ public class InterfaceAfficherPaquet extends javax.swing.JFrame {
         jPanel1.add(jPanel48);
 
         jPanel49.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel49.setLayout(new java.awt.GridLayout());
+        jPanel49.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel47.setBackground(new java.awt.Color(51, 51, 51));
         jLabel47.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -692,7 +694,7 @@ public class InterfaceAfficherPaquet extends javax.swing.JFrame {
         jPanel1.add(jPanel49);
 
         jPanel50.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel50.setLayout(new java.awt.GridLayout());
+        jPanel50.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel48.setBackground(new java.awt.Color(51, 51, 51));
         jLabel48.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -702,7 +704,7 @@ public class InterfaceAfficherPaquet extends javax.swing.JFrame {
         jPanel1.add(jPanel50);
 
         jPanel51.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel51.setLayout(new java.awt.GridLayout());
+        jPanel51.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel49.setBackground(new java.awt.Color(51, 51, 51));
         jLabel49.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -712,7 +714,7 @@ public class InterfaceAfficherPaquet extends javax.swing.JFrame {
         jPanel1.add(jPanel51);
 
         jPanel52.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel52.setLayout(new java.awt.GridLayout());
+        jPanel52.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel50.setBackground(new java.awt.Color(51, 51, 51));
         jLabel50.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -722,7 +724,7 @@ public class InterfaceAfficherPaquet extends javax.swing.JFrame {
         jPanel1.add(jPanel52);
 
         jPanel53.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel53.setLayout(new java.awt.GridLayout());
+        jPanel53.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel51.setBackground(new java.awt.Color(51, 51, 51));
         jLabel51.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -732,7 +734,7 @@ public class InterfaceAfficherPaquet extends javax.swing.JFrame {
         jPanel1.add(jPanel53);
 
         jPanel54.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel54.setLayout(new java.awt.GridLayout());
+        jPanel54.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel52.setBackground(new java.awt.Color(51, 51, 51));
         jLabel52.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -742,7 +744,7 @@ public class InterfaceAfficherPaquet extends javax.swing.JFrame {
         jPanel1.add(jPanel54);
 
         jPanel55.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel55.setLayout(new java.awt.GridLayout());
+        jPanel55.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel53.setBackground(new java.awt.Color(51, 51, 51));
         jLabel53.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -752,7 +754,7 @@ public class InterfaceAfficherPaquet extends javax.swing.JFrame {
         jPanel1.add(jPanel55);
 
         jPanel56.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel56.setLayout(new java.awt.GridLayout());
+        jPanel56.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel54.setBackground(new java.awt.Color(51, 51, 51));
         jLabel54.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -762,6 +764,17 @@ public class InterfaceAfficherPaquet extends javax.swing.JFrame {
         jPanel1.add(jPanel56);
 
         getContentPane().add(jPanel1);
+
+        jPanel58.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel58.setLayout(new java.awt.GridLayout());
+
+        jLabel56.setFont(new java.awt.Font("Agency FB", 1, 16)); // NOI18N
+        jLabel56.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel56.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel56.setText("Copiez le texte ci-dessous pour partager votre paquet");
+        jPanel58.add(jLabel56);
+
+        getContentPane().add(jPanel58);
 
         jPanel2.setBackground(new java.awt.Color(51, 51, 51));
         jPanel2.setLayout(new java.awt.GridLayout(1, 0));
@@ -832,6 +845,7 @@ public class InterfaceAfficherPaquet extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel53;
     private javax.swing.JLabel jLabel54;
     private javax.swing.JLabel jLabel55;
+    private javax.swing.JLabel jLabel56;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
@@ -889,6 +903,7 @@ public class InterfaceAfficherPaquet extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel55;
     private javax.swing.JPanel jPanel56;
     private javax.swing.JPanel jPanel57;
+    private javax.swing.JPanel jPanel58;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
