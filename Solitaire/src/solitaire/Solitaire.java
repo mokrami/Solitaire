@@ -21,14 +21,7 @@ public class Solitaire {
         appU1.setVisible(true);
         
         InterfaceGraphique appU2 = new InterfaceGraphique();
-        appU2.setVisible(true);
-               
-        Paquet p = new Paquet();
-        System.out.println(p.getPaquetS());
-        Afficher a = new Afficher(p);
-        a.setVisible(true);
-
-             
+        appU2.setVisible(true);             
     }
     
 }
