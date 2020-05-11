@@ -7,11 +7,16 @@ package solitaire;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JTextArea;
 import javax.swing.Timer;
+import javax.swing.filechooser.FileNameExtensionFilter;
+import solitaire.fichiers.FabriqueFichier;
+import solitaire.fichiers.Fichier;
 
 /**
  *
@@ -59,7 +64,9 @@ public class InterfaceGraphique extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea_MessageACrypter = new javax.swing.JTextArea();
+        jPanel13 = new javax.swing.JPanel();
         jButton_Crypter = new javax.swing.JButton();
+        jButton_ChargerCrypter = new javax.swing.JButton();
         jPanel8 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextArea_MasqueJetableCrypter = new javax.swing.JTextArea();
@@ -71,7 +78,9 @@ public class InterfaceGraphique extends javax.swing.JFrame {
         jPanel10 = new javax.swing.JPanel();
         jScrollPane4 = new javax.swing.JScrollPane();
         jTextArea_MessageADecrypter = new javax.swing.JTextArea();
+        jPanel14 = new javax.swing.JPanel();
         jButton_Decrypter = new javax.swing.JButton();
+        jButton_ChargerDecrypter = new javax.swing.JButton();
         jPanel11 = new javax.swing.JPanel();
         jScrollPane5 = new javax.swing.JScrollPane();
         jTextArea_MasqueJetableDecrypter = new javax.swing.JTextArea();
@@ -170,10 +179,14 @@ public class InterfaceGraphique extends javax.swing.JFrame {
         jTextArea_MessageACrypter.setBackground(new java.awt.Color(153, 153, 153));
         jTextArea_MessageACrypter.setColumns(20);
         jTextArea_MessageACrypter.setForeground(new java.awt.Color(255, 255, 255));
+        jTextArea_MessageACrypter.setLineWrap(true);
         jTextArea_MessageACrypter.setRows(5);
         jScrollPane1.setViewportView(jTextArea_MessageACrypter);
 
         jPanel3.add(jScrollPane1);
+
+        jPanel13.setPreferredSize(new java.awt.Dimension(0, 100));
+        jPanel13.setLayout(new java.awt.GridLayout(2, 0));
 
         jButton_Crypter.setBackground(new java.awt.Color(204, 204, 204));
         jButton_Crypter.setFont(new java.awt.Font("Agency FB", 0, 16)); // NOI18N
@@ -184,7 +197,19 @@ public class InterfaceGraphique extends javax.swing.JFrame {
                 jButton_CrypterMouseClicked(evt);
             }
         });
-        jPanel3.add(jButton_Crypter);
+        jPanel13.add(jButton_Crypter);
+
+        jButton_ChargerCrypter.setBackground(new java.awt.Color(204, 204, 204));
+        jButton_ChargerCrypter.setFont(new java.awt.Font("Agency FB", 0, 16)); // NOI18N
+        jButton_ChargerCrypter.setText("CHARGER FICHIER");
+        jButton_ChargerCrypter.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_ChargerCrypterActionPerformed(evt);
+            }
+        });
+        jPanel13.add(jButton_ChargerCrypter);
+
+        jPanel3.add(jPanel13);
 
         jPanel7.add(jPanel3);
 
@@ -196,6 +221,7 @@ public class InterfaceGraphique extends javax.swing.JFrame {
         jTextArea_MasqueJetableCrypter.setBackground(new java.awt.Color(102, 102, 102));
         jTextArea_MasqueJetableCrypter.setColumns(20);
         jTextArea_MasqueJetableCrypter.setForeground(new java.awt.Color(255, 255, 255));
+        jTextArea_MasqueJetableCrypter.setLineWrap(true);
         jTextArea_MasqueJetableCrypter.setRows(5);
         jScrollPane2.setViewportView(jTextArea_MasqueJetableCrypter);
 
@@ -211,6 +237,7 @@ public class InterfaceGraphique extends javax.swing.JFrame {
         jTextArea_MessageCrypte.setBackground(new java.awt.Color(102, 102, 102));
         jTextArea_MessageCrypte.setColumns(20);
         jTextArea_MessageCrypte.setForeground(new java.awt.Color(255, 255, 255));
+        jTextArea_MessageCrypte.setLineWrap(true);
         jTextArea_MessageCrypte.setRows(5);
         jScrollPane3.setViewportView(jTextArea_MessageCrypte);
 
@@ -230,10 +257,14 @@ public class InterfaceGraphique extends javax.swing.JFrame {
         jTextArea_MessageADecrypter.setBackground(new java.awt.Color(153, 153, 153));
         jTextArea_MessageADecrypter.setColumns(20);
         jTextArea_MessageADecrypter.setForeground(new java.awt.Color(255, 255, 255));
+        jTextArea_MessageADecrypter.setLineWrap(true);
         jTextArea_MessageADecrypter.setRows(5);
         jScrollPane4.setViewportView(jTextArea_MessageADecrypter);
 
         jPanel10.add(jScrollPane4);
+
+        jPanel14.setPreferredSize(new java.awt.Dimension(0, 100));
+        jPanel14.setLayout(new java.awt.GridLayout(2, 0));
 
         jButton_Decrypter.setBackground(new java.awt.Color(204, 204, 204));
         jButton_Decrypter.setFont(new java.awt.Font("Agency FB", 0, 16)); // NOI18N
@@ -244,7 +275,19 @@ public class InterfaceGraphique extends javax.swing.JFrame {
                 jButton_DecrypterMouseClicked(evt);
             }
         });
-        jPanel10.add(jButton_Decrypter);
+        jPanel14.add(jButton_Decrypter);
+
+        jButton_ChargerDecrypter.setBackground(new java.awt.Color(204, 204, 204));
+        jButton_ChargerDecrypter.setFont(new java.awt.Font("Agency FB", 0, 16)); // NOI18N
+        jButton_ChargerDecrypter.setText("CHARGER FICHIER");
+        jButton_ChargerDecrypter.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_ChargerDecrypterActionPerformed(evt);
+            }
+        });
+        jPanel14.add(jButton_ChargerDecrypter);
+
+        jPanel10.add(jPanel14);
 
         jPanel6.add(jPanel10);
 
@@ -256,6 +299,7 @@ public class InterfaceGraphique extends javax.swing.JFrame {
         jTextArea_MasqueJetableDecrypter.setBackground(new java.awt.Color(102, 102, 102));
         jTextArea_MasqueJetableDecrypter.setColumns(20);
         jTextArea_MasqueJetableDecrypter.setForeground(new java.awt.Color(255, 255, 255));
+        jTextArea_MasqueJetableDecrypter.setLineWrap(true);
         jTextArea_MasqueJetableDecrypter.setRows(5);
         jScrollPane5.setViewportView(jTextArea_MasqueJetableDecrypter);
 
@@ -271,6 +315,7 @@ public class InterfaceGraphique extends javax.swing.JFrame {
         jTextArea_MessageDecrypte.setBackground(new java.awt.Color(102, 102, 102));
         jTextArea_MessageDecrypte.setColumns(20);
         jTextArea_MessageDecrypte.setForeground(new java.awt.Color(255, 255, 255));
+        jTextArea_MessageDecrypte.setLineWrap(true);
         jTextArea_MessageDecrypte.setRows(5);
         jScrollPane6.setViewportView(jTextArea_MessageDecrypte);
 
@@ -343,6 +388,47 @@ public class InterfaceGraphique extends javax.swing.JFrame {
         ap.setVisible(true);
     }//GEN-LAST:event_jButton_AfficherPaquetActionPerformed
 
+    private String getPathFile(ArrayList<FileNameExtensionFilter> filter){
+        String path = "";
+        JFileChooser chooser = new JFileChooser();
+        for(FileNameExtensionFilter filtre : filter) chooser.setFileFilter(filtre);
+        int returnVal = chooser.showOpenDialog(this);
+        if(returnVal == JFileChooser.APPROVE_OPTION) path = chooser.getSelectedFile().getName();
+        
+        return path;
+    }
+    
+    private void jButton_ChargerCrypterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ChargerCrypterActionPerformed
+        ArrayList<FileNameExtensionFilter> filters = new ArrayList<>();
+        filters.add(new FileNameExtensionFilter("Fichiers texte", "txt"));
+        String path = this.getPathFile(filters);
+        Fichier f = FabriqueFichier.creerFichier(path);
+        byte[] contenu = f.charger(path);
+        this.jTextArea_MasqueJetableCrypter.setText("Cryptage en cours ...\n");
+        byte[] resultat = this.user.crypter(contenu);
+        this.jTextArea_MasqueJetableCrypter.setText(this.jTextArea_MasqueJetableCrypter.getText() + "Cryptage terminé.\n");
+        this.jTextArea_MasqueJetableCrypter.setText(this.jTextArea_MasqueJetableCrypter.getText() + "Enregistrement du fichier crypté.");
+        f.sauver(path + ".bin", resultat);
+        this.jTextArea_MessageCrypte.setText("Terminé : " + path + ".bin");
+    }//GEN-LAST:event_jButton_ChargerCrypterActionPerformed
+
+    private void jButton_ChargerDecrypterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ChargerDecrypterActionPerformed
+        ArrayList<FileNameExtensionFilter> filters = new ArrayList<>();
+        filters.add(new FileNameExtensionFilter("Fichiers binaires cryptés", "bin"));
+        String path = this.getPathFile(filters);
+        System.out.println(path);
+        Fichier f = FabriqueFichier.creerFichier(path);
+        byte[] contenu = f.charger(path);
+        this.jTextArea_MasqueJetableDecrypter.setText("Décryptage en cours ...\n");
+        byte[] resultat = this.user.decrypter(contenu);
+        this.jTextArea_MasqueJetableDecrypter.setText(this.jTextArea_MasqueJetableDecrypter.getText() + "Décryptage terminé.\n");
+        this.jTextArea_MasqueJetableDecrypter.setText(this.jTextArea_MasqueJetableDecrypter.getText() + "Enregistrement du fichier décrypté.");
+        String nouveauNom = path.replace(".bin", "");
+        nouveauNom = nouveauNom.replace(".", "_decrypted.");
+        f.sauver(nouveauNom, resultat);
+        this.jTextArea_MessageDecrypte.setText("Terminé : " + nouveauNom);
+    }//GEN-LAST:event_jButton_ChargerDecrypterActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.Box.Filler filler1;
     private javax.swing.Box.Filler filler2;
@@ -353,6 +439,8 @@ public class InterfaceGraphique extends javax.swing.JFrame {
     private javax.swing.Box.Filler filler7;
     private javax.swing.Box.Filler filler8;
     private javax.swing.JButton jButton_AfficherPaquet;
+    private javax.swing.JButton jButton_ChargerCrypter;
+    private javax.swing.JButton jButton_ChargerDecrypter;
     private javax.swing.JButton jButton_Crypter;
     private javax.swing.JButton jButton_Decrypter;
     private javax.swing.JButton jButton_ModifierPaquet;
@@ -363,6 +451,8 @@ public class InterfaceGraphique extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
+    private javax.swing.JPanel jPanel13;
+    private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
