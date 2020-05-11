@@ -13,6 +13,9 @@ public class FabriqueFichier {
     public static Fichier creerFichier(String chemin){
         Fichier f = null;
         if(chemin.contains(".txt")) f = new FichierTexte();
+        else if(chemin.contains(".jpg")) f = new FichierImage();
+        else if(chemin.contains(".png")) f = new FichierImage();
+        else if(chemin.contains(".gif")) f = new FichierImage();
         else if(chemin.contains(".bin")) f = new FichierTexte();
         
         return f;

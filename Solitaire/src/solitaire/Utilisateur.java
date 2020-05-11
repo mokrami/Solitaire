@@ -54,7 +54,7 @@ public class Utilisateur {
             a = (this.getPaquet().genererUneLettreAleatoire()-65)%16;
             b = (this.getPaquet().genererUneLettreAleatoire()-65)%16;
             masque = 16*a+b;
-            message_resultat[i] = (byte) ((octet + masque)%255);
+            message_resultat[i] = (byte) ((octet + masque)%256);
         }
         
         return message_resultat;
@@ -114,7 +114,7 @@ public class Utilisateur {
             a = (this.getPaquet().genererUneLettreAleatoire()-65)%16;
             b = (this.getPaquet().genererUneLettreAleatoire()-65)%16;
             masque = 16*a+b;
-            message_resultat[i] = (byte) (Math.floorMod(octet-masque, 255));
+            message_resultat[i] = (byte) (Math.floorMod(octet-masque, 256));
         }
         
         return message_resultat;

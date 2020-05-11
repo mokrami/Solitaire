@@ -8,6 +8,7 @@ package solitaire;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFileChooser;
@@ -401,15 +402,20 @@ public class InterfaceGraphique extends javax.swing.JFrame {
     private void jButton_ChargerCrypterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ChargerCrypterActionPerformed
         ArrayList<FileNameExtensionFilter> filters = new ArrayList<>();
         filters.add(new FileNameExtensionFilter("Fichiers texte", "txt"));
+        filters.add(new FileNameExtensionFilter("Fichiers image", "jpg", "png", "gif"));
         String path = this.getPathFile(filters);
         Fichier f = FabriqueFichier.creerFichier(path);
-        byte[] contenu = f.charger(path);
-        this.jTextArea_MasqueJetableCrypter.setText("Cryptage en cours ...\n");
-        byte[] resultat = this.user.crypter(contenu);
-        this.jTextArea_MasqueJetableCrypter.setText(this.jTextArea_MasqueJetableCrypter.getText() + "Cryptage terminé.\n");
-        this.jTextArea_MasqueJetableCrypter.setText(this.jTextArea_MasqueJetableCrypter.getText() + "Enregistrement du fichier crypté.");
-        f.sauver(path + ".bin", resultat);
-        this.jTextArea_MessageCrypte.setText("Terminé : " + path + ".bin");
+        Fichier fb = FabriqueFichier.creerFichier(".bin");
+        if(f != null){
+            byte[] contenu = f.charger(path);
+            jTextArea_MasqueJetableCrypter.setText("Cryptage en cours ...\n");
+            byte[] resultat = this.user.crypter(contenu);
+            this.jTextArea_MasqueJetableCrypter.setText(this.jTextArea_MasqueJetableCrypter.getText() + "Cryptage terminé.\n");
+            this.jTextArea_MasqueJetableCrypter.setText(this.jTextArea_MasqueJetableCrypter.getText() + "Enregistrement du fichier crypté.");
+            fb.sauver(path + ".bin", resultat);
+            this.jTextArea_MessageCrypte.setText("Terminé : " + path + ".bin");
+        }
+        else this.jTextArea_MessageCrypte.setText("Erreur : format inconnu - " + path);
     }//GEN-LAST:event_jButton_ChargerCrypterActionPerformed
 
     private void jButton_ChargerDecrypterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ChargerDecrypterActionPerformed
@@ -418,15 +424,19 @@ public class InterfaceGraphique extends javax.swing.JFrame {
         String path = this.getPathFile(filters);
         System.out.println(path);
         Fichier f = FabriqueFichier.creerFichier(path);
-        byte[] contenu = f.charger(path);
-        this.jTextArea_MasqueJetableDecrypter.setText("Décryptage en cours ...\n");
-        byte[] resultat = this.user.decrypter(contenu);
-        this.jTextArea_MasqueJetableDecrypter.setText(this.jTextArea_MasqueJetableDecrypter.getText() + "Décryptage terminé.\n");
-        this.jTextArea_MasqueJetableDecrypter.setText(this.jTextArea_MasqueJetableDecrypter.getText() + "Enregistrement du fichier décrypté.");
-        String nouveauNom = path.replace(".bin", "");
-        nouveauNom = nouveauNom.replace(".", "_decrypted.");
-        f.sauver(nouveauNom, resultat);
-        this.jTextArea_MessageDecrypte.setText("Terminé : " + nouveauNom);
+        Fichier fb = FabriqueFichier.creerFichier(".bin");
+        if(f != null){
+            byte[] contenu = fb.charger(path);
+            this.jTextArea_MasqueJetableDecrypter.setText("Décryptage en cours ...\n");
+            byte[] resultat = this.user.decrypter(contenu);
+            this.jTextArea_MasqueJetableDecrypter.setText(this.jTextArea_MasqueJetableDecrypter.getText() + "Décryptage terminé.\n");
+            this.jTextArea_MasqueJetableDecrypter.setText(this.jTextArea_MasqueJetableDecrypter.getText() + "Enregistrement du fichier décrypté.");
+            String nouveauNom = path.replace(".bin", "");
+            nouveauNom = nouveauNom.replace(".", "_decrypted.");
+            f.sauver(nouveauNom, resultat);
+            this.jTextArea_MessageDecrypte.setText("Terminé : " + nouveauNom);
+        }
+        else this.jTextArea_MessageDecrypte.setText("Erreur : format inconnu - " + path);
     }//GEN-LAST:event_jButton_ChargerDecrypterActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
