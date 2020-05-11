@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package solitaire.fichiers;
+package solitaire;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -16,9 +16,8 @@ import java.util.logging.Logger;
  *
  * @author alexis
  */
-public class FichierTexte implements Fichier {
+public class Fichier{
 
-    @Override
     public byte[] charger(String chemin) {
         byte[] data = null;
         
@@ -26,14 +25,13 @@ public class FichierTexte implements Fichier {
             data = Files.readAllBytes(Paths.get(chemin));
             System.out.println("Fichier chargé.");
         } catch (IOException ex) {
-            Logger.getLogger(FichierTexte.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Fichier.class.getName()).log(Level.SEVERE, null, ex);
             System.err.println("Impossible de charger le fichier.");
         }
         
         return data;
     }
 
-    @Override
     public void sauver(String chemin, byte[] contenu) {
         try (FileOutputStream fos2 = new FileOutputStream(chemin)) {
             fos2.write(contenu);
