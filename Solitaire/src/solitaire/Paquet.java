@@ -135,28 +135,10 @@ public class Paquet {
      * Mélange le paquet de carte selon la méthode du solitaire
      */
     private void melange(){
-//        System.out.println("-- Etape 1 :");
-//        System.out.println(this.toString());
         this.reculerJokerNoir();
-        
-//        System.out.println("");
-//        System.out.println("-- Etape 2 :");
-//        System.out.println(this.toString());
         this.reculerJokerRouge();
-        
-//        System.out.println("");
-//        System.out.println("-- Etape 3 :");
-//        System.out.println(this.toString());
         this.doubleCoupe();
-        
-//        System.out.println("");
-//        System.out.println("-- Etape 4 :");
-//        System.out.println(this.toString());
         this.coupeSimple();
-        
-//        System.out.println("");
-//        System.out.println("-- Etape 5 :");
-//        System.out.println(this.toString());
     }
     
     /**
